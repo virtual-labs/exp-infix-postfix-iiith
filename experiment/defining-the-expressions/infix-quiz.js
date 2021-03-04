@@ -89,57 +89,38 @@
 
 
      const myQuestions = [{
-            question: "1. What does push operation on a stack do?", ///// Write the question inside double quotes
+            question: "1. A postfix expression is also called as ______.", ///// Write the question inside double quotes
             answers: {
-                a: "Adds an element to the bottom of the stack. ", ///// Write the option 1 inside double quotes
-                b: "Adds an element to the top of the stack.", ///// Write the option 2 inside double quotes
-                c: "Removes an element from the top of the stack. ", ///// Write the option 2 inside double quotes
-                d: "Teacher mugs up all students names. ", ///// Write the option 2 inside double quotes
+                a: "RPN  ", ///// Write the option 1 inside double quotes
+                b: "PPN", ///// Write the option 2 inside double quotes
+                c: "DNP ", ///// Write the option 2 inside double quotes
+                d: "GNP ", ///// Write the option 2 inside double quotes
             },
-            correctAnswer: "b" ///// Write the correct option inside double quotes
+            correctAnswer: "a" ///// Write the correct option inside double quotes
         },
 
     {
-      question: "2. Situation: A teacher wants to remember the names of all students in the class. Which of the following best possible way to use the linked list in this situation? ",  ///// Write the question inside double quotes
+      question: "2. Expression in which Operator is written after Operand is called as _______. ",  ///// Write the question inside double quotes
       answers: {
-        a: "Teacher mugs up all students names. ",                  ///// Write the option 1 inside double quotes
-        b: "Teacher asks her favorite student to mug up all others names and help her whenever needed. ",                  ///// Write the option 2 inside double quotes
-	c: "Teacher asks each student to remember the person sitting next to him/her and the teacher will only have to remember the first person's name. ", ///// Write the option 3 inside double quotes
-        d: " Teacher asks all students to mug every other student's name.", ///// Write the option 4 inside double quotes
-             },
-      correctAnswer: "c"                ///// Write the correct option inside double quotes
-    },
-
-{
-      question: "3. Situation: A teacher wants to remember the names of all students in the class. In the aforementioned question, what are the pros and cons using linked list faced by the teacher? ",  ///// Write the question inside double quotes
-      answers: {
-        a: "It minimizes her effort.",                  ///// Write the option 1 inside double quotes
-        b: "To access a student's name it will take a lot of time. ",                  ///// Write the option 2 inside double quotes
-	c: "Both a and b", ///// Write the option 3 inside double quotes
-        d: " None of these ", ///// Write the option 4 inside double quotes
-             },
-      correctAnswer: "c"                ///// Write the correct option inside double quotes
-    },
-{
-      question: "4. Which of the following best describes a stack?",  ///// Write the question inside double quotes
-      answers: {
-        a: "People standing at Starbucks.",                  ///// Write the option 1 inside double quotes
-        b: "A family tree ",                  ///// Write the option 2 inside double quotes
-	c: "A football team ", ///// Write the option 3 inside double quotes
-        d: "Water in water bottle", ///// Write the option 4 inside double quotes
-             },
-      correctAnswer: "d"                ///// Write the correct option inside double quotes
-    },
-{
-      question: "5. On what principle objects are inserted and removed in stacks?",  ///// Write the question inside double quotes
-      answers: {
-        a: "LIFO",                  ///// Write the option 1 inside double quotes
-        b: "FIFO",                  ///// Write the option 2 inside double quotes
-	c: "Both a and b ", ///// Write the option 3 inside double quotes
-        d: "None of These ", ///// Write the option 4 inside double quotes
+        a: "Infix Expression  ",                  ///// Write the option 1 inside double quotes
+        b: "Postfix Expression  ",                  ///// Write the option 2 inside double quotes
+	c: "Prefix Expression", ///// Write the option 3 inside double quotes
+        d: "None of these", ///// Write the option 4 inside double quotes
              },
       correctAnswer: "a"                ///// Write the correct option inside double quotes
     },
+
+{
+      question: "3. Which of the following is an Infix Expression?",  ///// Write the question inside double quotes
+      answers: {
+        a: "b * c + d / e ",                  ///// Write the option 1 inside double quotes
+        b: "b*cde/+ ",                  ///// Write the option 2 inside double quotes
+	c: "+ + A * B C D ", ///// Write the option 3 inside double quotes
+         
+             },
+      correctAnswer: "a"                ///// Write the correct option inside double quotes
+    },
+
 
      ];
 

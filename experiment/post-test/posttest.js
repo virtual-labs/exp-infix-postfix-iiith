@@ -89,60 +89,60 @@
 
 
     const myQuestions = [{
-            question: "1. Sample question1", ///// Write the question inside double quotes
+            question: "1. Why is there a need to convert from infix to postfix and then evaluate, instead of directly evaluating infix? ", ///// Write the question inside double quotes
             answers: {
-                a: "1", ///// Write the option 1 inside double quotes
-                b: "2", ///// Write the option 2 inside double quotes
- 		c: "3", ///// Write the option 3 inside double quotes
-                d: "4", ///// Write the option 4 inside double quotes
+                a: " It is easier to read for humans ", ///// Write the option 1 inside double quotes
+                b: " It is easier to [[https://en.wikipedia.org/wiki/Parsing][parse]](be read by computer).", ///// Write the option 2 inside double quotes
+ 		c: "Both a and b ", ///// Write the option 3 inside double quotes
+                d: "None of these.", ///// Write the option 4 inside double quotes
             },
-            correctAnswer: "c" ///// Write the correct option inside double quotes
+            correctAnswer: "b" ///// Write the correct option inside double quotes
         },
 
     {
-      question: "2.Sample question2",  ///// Write the question inside double quotes
+      question: "2. Postfix evaluation of 1 2 + 3 9 - + 4 + is _______.",  ///// Write the question inside double quotes
       answers: {
-        a: "1",                  ///// Write the option 1 inside double quotes
+        a: "3",                  ///// Write the option 1 inside double quotes
         b: "2",                  ///// Write the option 2 inside double quotes
-	c: "3", ///// Write the option 3 inside double quotes
+	c: "1", ///// Write the option 3 inside double quotes
         d: "4", ///// Write the option 4 inside double quotes
+              },
+      correctAnswer: "c"                ///// Write the correct option inside double quotes
+    },
+
+{
+      question: "3. Convert the expression from infix to postfix 1 + 1 - 3 * 4 / 2 + 3 - 8?",  ///// Write the question inside double quotes
+      answers: {
+        a: "1 1 + 3 - 4 * 2 / + 3 8 - ",                  ///// Write the option 1 inside double quotes
+        b: "1 1 + 3 - 4 / 2 * 3 + 8 - ",                  ///// Write the option 2 inside double quotes
+	c: "1 1 + 3 4 * 2 / - 3 + 8 - ", ///// Write the option 3 inside double quotes
+        d: "1 1 * 3 + 4 - 2 + 3 / 8 - ", ///// Write the option 4 inside double quotes
+              },
+      correctAnswer: "c"                ///// Write the correct option inside double quotes
+    },
+
+{
+      question: "4. Convert the expression from Infix to Postfix a + b * (c ^ d - e) ^ (f + g * h) - i?",  ///// Write the question inside double quotes
+      answers: {
+        a: "ab^cd-ef+d*h^*-i+",                  ///// Write the option 1 inside double quotes
+        b: "ab^cd-ef+d*h*^-i+",                  ///// Write the option 2 inside double quotes
+	c: "abcd^e-fgh*+^*+i- ", ///// Write the option 3 inside double quotes
+        d: "abcd^e-fgh*+*^+i- ", ///// Write the option 4 inside double quotes
+	 
+              },
+      correctAnswer: "c"                ///// Write the correct option inside double quotes
+    },
+
+{
+      question: "5. Convert the expression from Infix to Postfix a + b * c - d ^ e ^ f?",  ///// Write the question inside double quotes
+      answers: {
+        a: "abc * + def ^^-",                  ///// Write the option 1 inside double quotes
+        b: "abc * + de ^ f ^-\",                  ///// Write the option 2 inside double quotes
+	c: "ab + c *d - e ^ f ^ ", ///// Write the option 3 inside double quotes
+        d: "-+ a * bc ^^ def", ///// Write the option 4 inside double quotes
+	 
               },
       correctAnswer: "a"                ///// Write the correct option inside double quotes
-    },
-
-{
-      question: "3. Sample question3",  ///// Write the question inside double quotes
-      answers: {
-        a: "1",                  ///// Write the option 1 inside double quotes
-        b: "2",                  ///// Write the option 2 inside double quotes
-	c: "3", ///// Write the option 3 inside double quotes
-        d: "4", ///// Write the option 4 inside double quotes
-              },
-      correctAnswer: "b"                ///// Write the correct option inside double quotes
-    },
-
-{
-      question: "4.Sample question3",  ///// Write the question inside double quotes
-      answers: {
-        a: "1",                  ///// Write the option 1 inside double quotes
-        b: "2",                  ///// Write the option 2 inside double quotes
-	c: "3", ///// Write the option 3 inside double quotes
-        d: "4", ///// Write the option 4 inside double quotes
-	e: "5 ", ///// Write the option 5 inside double quotes
-              },
-      correctAnswer: "a"                ///// Write the correct option inside double quotes
-    },
-
-{
-      question: "5. Sample question5",  ///// Write the question inside double quotes
-      answers: {
-        a: "1",                  ///// Write the option 1 inside double quotes
-        b: "2",                  ///// Write the option 2 inside double quotes
-	c: "3 ", ///// Write the option 3 inside double quotes
-        d: "4", ///// Write the option 4 inside double quotes
-	e: "5", ///// Write the option 4 inside double quotes
-              },
-      correctAnswer: "d"                ///// Write the correct option inside double quotes
     },
         
     ];
