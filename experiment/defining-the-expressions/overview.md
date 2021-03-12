@@ -9,6 +9,4 @@
 ### Infix to Postfix Algorithm
 <iframe src="https://www.youtube.com/embed/tuuUFBbXu_E" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
-### Conversion of infix to post fix
 
-This module helps the better understanding of Infix to Postfix conversion of expressions and evaluation of Postfix expression. 
