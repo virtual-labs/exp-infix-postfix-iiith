@@ -1,7 +1,7 @@
-### Estimated Time
+### Estimated Time Pre Test Quiz
 
 10 minutes
-### Instructions for Pre-Test
+### Instructions for Pre Test Quiz
 
   -  Pretest includes questions on stacks, linkedlist.
   -  If you want to revise these topics before taking the quiz, go through the Recap module first.
