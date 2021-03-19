@@ -1,0 +1,174 @@
+#questionid{
+    position: relative;
+    padding-top: 2%;
+    padding-left: 22%;
+}
+canvas {
+    background-color    : rgba(255, 255, 255, 0.0);
+    width               : 14vw;
+    position            : relative;
+    border-style        : solid;
+    border-width        : 1px;
+    border-color        : rgba(150, 150, 150, 1.0);
+    transform           : rotate(0deg);
+}
+#pop_button {
+    background-color: #288ec8;
+    height          : 4vh;
+    width           : 6vw;
+    position        : relative;
+    border-radius   : 50vw;
+    border-width    : 0px;
+    color           :white;
+    font-size       : 1.5vw;
+    transform: rotate(0deg);
+}
+#pop_button:hover{
+    background-color:gray;
+    cursor:pointer;
+}
+#tooutput {
+    margin-top: 1%;
+    height:20px; /* Chrome only not Firefox */
+    width:20px;  /* Chrome only not Firefox */
+    position: relative;
+    margin-left  : 14%;
+    border-radius: 50vw;
+    border-width: 0px;
+    color:white;
+    font-size: 20px;
+    transform           : rotate(0deg);
+}
+#tooutputtext {
+    margin-top: 3%;
+    position: relative;
+    margin-left: 14%;
+    border-radius: 25px;
+    border-width: 0px;
+    color:black;
+    font-size: 14px;
+}
+#toignore {
+    margin-top: 1%;
+    height:20px; /* Chrome only not Firefox */
+    width:20px; /* Chrome only not Firefox */
+    position: relative;
+    margin-left  : -19%;
+    border-radius: 50vw;
+    border-width: 0px;
+    color:white;
+    font-size: 20px;
+    transform           : rotate(0deg);
+}
+#toignoretext{
+    margin-top: 3%;
+    position: relative;
+    margin-left: -13%;
+    border-radius: 25px;
+    border-width: 0px;
+    color:black;
+    font-size: 14px;
+    transform           : rotate(0deg);
+}
+#pushtostack {
+    position: relative;
+    font-size: 1.5vw;
+    transform           : rotate(0deg);
+}
+#push_tostack_button {
+    background-color: #288ec8;
+    position: relative;   
+    border-radius   : 50vw;
+    border-width    : 0px;
+    color           :white;
+    font-size       : 1.5vw;
+    transform: rotate(0deg);
+    height          : 4vh;
+    width           : 6vw;
+}
+#push_tostack_button:hover{
+    background-color:gray;
+    cursor:pointer;
+}
+#push_to_stack_text {
+    background-color: white;
+    color : black;
+    position: relative;
+    border: 0px;
+    font-size: 14px;
+    transform           : rotate(0deg);
+    margin-left: -15%;
+}
+#typetooutput {
+    position: relative;
+    font-size: 1.5vw;
+    transform           : rotate(0deg);
+}
+#type_tooutput_button {
+    background-color: #288ec8;
+    position: relative;
+    border-radius   : 50vw;
+    border-width    : 0px;
+    color           :white;
+    font-size       : 1.5vw;
+    transform: rotate(0deg);
+    height          : 4vh;
+    width           : 6vw;
+}
+#type_tooutput_button:hover{
+    background-color:gray;
+    cursor:pointer;
+}
+#to_output {
+    color       : rgba(0, 0, 0, 1.0);
+    position    : relative;
+    border      : 0px;
+    font-size   : 14px;
+    font-family : "OpenSans-Regular", Helvetica, Arial, serif;
+    background-color    : white;
+    transform           : rotate(0deg);
+    margin-left: -15%;
+}
+#output {
+    color       : rgba(0, 0, 0, 1.0);
+    font-size   : 2.5vh;
+    position    : relative;
+    font-family : "OpenSans-Regular", Helvetica, Arial, serif;
+    transform           : rotate(0deg);
+}
+#column {
+  float: left;
+  width: 33.33%;
+  text-align: center;
+}
+#column:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+#row1{
+    width: 100%;
+    height:33.33%;
+}
+#column1{
+    float: left;
+    width:50%;
+    height: 33.33%;
+}
+#column2{
+    float: right;
+    width:50%;
+    height: 33.33%;
+}
+#controller{
+    margin-left: 35%;
+}
+#infix_to_postfix{
+    height: 40vh;
+    padding-top: 5%
+}
+#comments{
+  text-align: center;
+  height: 10vh;
+  font-size: 1.5vw;
+}

@@ -1,0 +1,21 @@
+#questionid{
+    font-size:2vw;
+    text-align: center;
+}
+#validation{
+    font-size:2vw;
+    text-align: center;
+    height: 20vw;
+}
+#slide_demo{
+    text-align: center;
+    font-size:2vw;
+}
+#buttondiv{
+    text-align: center;
+}
+#comments{
+  text-align: center;
+  height: 10vh;
+  font-size: 2vw;
+}
