@@ -89,47 +89,38 @@
 
 
      const myQuestions = [{
-            question: "1. Sample question1", ///// Write the question inside double quotes
+            question: "1. A postfix expression is also called as ______.", ///// Write the question inside double quotes
             answers: {
-                a: "1", ///// Write the option 1 inside double quotes
-                b: "2", ///// Write the option 2 inside double quotes
-                c: "3", ///// Write the option 2 inside double quotes
-                d: "4", ///// Write the option 2 inside double quotes
+                a: "RPN  ", ///// Write the option 1 inside double quotes
+                b: "PPN", ///// Write the option 2 inside double quotes
+                c: "DNP ", ///// Write the option 2 inside double quotes
+                d: "GNP ", ///// Write the option 2 inside double quotes
             },
-            correctAnswer: "b" ///// Write the correct option inside double quotes
+            correctAnswer: "a" ///// Write the correct option inside double quotes
         },
 
     {
-      question: "2. Sample question2",  ///// Write the question inside double quotes
+      question: "2. Expression in which Operator is written after Operand is called as _______. ",  ///// Write the question inside double quotes
       answers: {
-        a: "1",                  ///// Write the option 1 inside double quotes
-        b: "2",                  ///// Write the option 2 inside double quotes
-	c: "3", ///// Write the option 3 inside double quotes
-        d: "4", ///// Write the option 4 inside double quotes
+        a: "Infix Expression  ",                  ///// Write the option 1 inside double quotes
+        b: "Postfix Expression  ",                  ///// Write the option 2 inside double quotes
+	c: "Prefix Expression", ///// Write the option 3 inside double quotes
+        d: "None of these", ///// Write the option 4 inside double quotes
              },
       correctAnswer: "a"                ///// Write the correct option inside double quotes
     },
 
 {
-      question: "3. Sample question3",  ///// Write the question inside double quotes
+      question: "3. Which of the following is an Infix Expression?",  ///// Write the question inside double quotes
       answers: {
-        a: "1",                  ///// Write the option 1 inside double quotes
-        b: "2",                  ///// Write the option 2 inside double quotes
-	c: "3", ///// Write the option 3 inside double quotes
-        d: "4", ///// Write the option 4 inside double quotes
+        a: "b * c + d / e ",                  ///// Write the option 1 inside double quotes
+        b: "b*cde/+ ",                  ///// Write the option 2 inside double quotes
+	c: "+ + A * B C D ", ///// Write the option 3 inside double quotes
+         
              },
-      correctAnswer: "d"                ///// Write the correct option inside double quotes
+      correctAnswer: "a"                ///// Write the correct option inside double quotes
     },
-{
-      question: "4. Sample question4",  ///// Write the question inside double quotes
-      answers: {
-        a: "1",                  ///// Write the option 1 inside double quotes
-        b: "2",                  ///// Write the option 2 inside double quotes
-	c: "3", ///// Write the option 3 inside double quotes
-        d: "4", ///// Write the option 4 inside double quotes
-             },
-      correctAnswer: "c"                ///// Write the correct option inside double quotes
-    },
+
 
      ];
 

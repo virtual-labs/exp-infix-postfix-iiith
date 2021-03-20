@@ -1,0 +1,196 @@
+{
+  "unit-type": "lu",
+  "label": "Infix and Postfix",
+  "basedir": ".",
+  "units": [
+    {
+      "unit-type": "aim"
+    },
+    {
+      "unit-type": "task",
+      "label": "Overview",
+      "content-type": "video",
+      "source": "overview.md",
+      "target": "overview.html"
+    },
+    {
+      "unit-type": "task",
+      "label": "Pre Test Quiz Instructions",
+      "content-type": "video",
+      "source": "pre-test.md",
+      "target": "pre-test.html"
+    },
+    {
+      "unit-type": "task",
+      "label": "Pre Test Quiz",
+      "content-type": "assesment",
+      "source": "pretest.js",
+      "target": "pretest.html"
+    },
+    {
+      "unit-type": "lu",
+      "label": "Defining the Expressions",
+      "basedir": "defining-the-expressions",
+      "units": [
+        {
+          "unit-type": "aim"
+        },
+        {
+          "unit-type": "task",
+          "label": "Overview",
+          "content-type": "video",
+          "source": "overview.md",
+          "target": "overview.html"
+        },
+	{
+          "unit-type": "task",
+          "label": "Introducing Infix Expressions",
+          "content-type": "video",
+          "source": "introducing-infix-expressions.md",
+          "target": "introducing-infix-expressions.html"
+        },
+        {
+          "unit-type": "task",
+          "label": "Introducing Postfix Expressions",
+          "content-type": "video",
+          "source": "introducing-postfix-expressions.md",
+          "target": "introducing-postfix-expressions.html"
+        },
+      	{
+         "unit-type": "task",
+         "label": "Infix Quiz",
+         "content-type": "assesment",
+         "source": "infix-quiz.js",
+         "target": "infix-quiz.html"
+       }
+      
+      ]
+    },
+    {
+      "unit-type": "lu",
+      "label": "Infix to Postfix Conversion without Stack",
+      "basedir": "infix-to-postfix-conversion-without-stack",
+      "units": [
+        {
+          "unit-type": "aim"
+        },
+	{
+          "unit-type": "task",
+          "label": "Overview",
+          "content-type": "video",
+          "source": "overview.md",
+          "target": "overview.html"
+        },
+	{
+          "unit-type": "task",
+          "label": "Algorithm for Conversion without Stack",
+          "content-type": "video",
+          "source": "algorithm-for-conversion-without-stack.md",
+          "target": "algorithm-for-conversion-without-stack.html"
+        }
+        
+      ]
+    },
+        {
+      "unit-type": "lu",
+      "label": "Infix to Postfix Conversion with Stack",
+      "basedir": "infix to-postfix-conversion-with-stack",
+      "units": [
+        {
+          "unit-type": "aim"
+        },
+	{
+          "unit-type": "task",
+          "label": "Overview",
+          "content-type": "video",
+          "source": "overview.md",
+          "target": "overview.html"
+        },
+        {
+          "unit-type": "task",
+          "label": "Validation of Expressions",
+          "content-type": "simulation",
+          "source": "simulation/validation-of-expressions.html",
+          "target": "validation-of-expressions.html"
+        },
+        {
+          "unit-type": "task",
+          "label": "Push and Pop Operations On Stack",
+          "content-type": "video",
+          "source": "push-and-pop-operations-on-stack.md",
+          "target": "push-and-pop-operations-on-stack.html"
+        },
+        {
+          "unit-type": "task",
+          "label": "Push and Pop operations Practice",
+          "content-type": "simulation",
+          "source": "simulation/push-and-pop-operations-practice.html",
+          "target": "push-and-pop-operations-practice.html"
+        },
+	{
+          "unit-type": "task",
+          "label": "The Whole Conversion",
+          "content-type": "video",
+          "source": "the-whole-conversion.md",
+          "target": "the-whole-conversion.html"
+        },
+	{
+          "unit-type": "task",
+          "label": "Whole Conversion Exercise",
+          "content-type": "simulation",
+          "source": "simulation/whole-conversion-exercise.html",
+          "target": "whole-conversion-exercise.html"
+        }
+      ]
+    },
+
+     {
+      "unit-type": "lu",
+      "label": "Evaluation of Postfix Expressions",
+      "basedir": "evaluation-of-postfix-expressions",
+      "units": [
+        {
+          "unit-type": "aim"
+        },
+	{
+          "unit-type": "task",
+          "label": "Overview",
+          "content-type": "video",
+          "source": "overview.md",
+          "target": "overview.html"
+        },
+        {
+          "unit-type": "task",
+          "label": "Evaluation of Postfix Expression",
+          "content-type": "video",
+          "source": "evaluation-of-post-fix-expressions.md",
+          "target": "evaluation-of-post-fix-expressions.html"
+        },
+        {
+          "unit-type": "task",
+          "label": "Push and Pop operations Practice",
+          "content-type": "simulation",
+          "source": "simulation/postfix-evaluation-exercise.html",
+          "target": "postfix-evaluation-exercise.html"
+        }
+	
+      ]
+    },
+    
+    {
+      "unit-type": "task",
+      "label": "Post Test Quiz",
+      "content-type": "assesment",
+      "source": "posttest.js",
+      "target": "posttest.html"
+    },
+       
+    {
+      "unit-type": "task",
+      "label": "Further Readings/References",
+      "content-type": "text",
+      "source": "further-reading-and-references.md",
+      "target": "further-reading-and-references.html"
+    }
+  ]
+}
