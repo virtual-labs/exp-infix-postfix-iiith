@@ -138,7 +138,7 @@ correctAnswer: "c"                ///// Write the correct option inside double q
 question: "5. Convert the expression from Infix to Postfix a + b * c - d ^ e ^ f?",  ///// Write the question inside double quotes
 answers: {
 a: "abc * + def ^^-",                  ///// Write the option 1 inside double quotes
-b: "abc * + de ^ f ^-\",                  ///// Write the option 2 inside double quotes
+b: "abc * + de ^ f ^-\\",                  ///// Write the option 2 inside double quotes
 c: "ab + c *d - e ^ f ^ ", ///// Write the option 3 inside double quotes
 d: "-+ a * bc ^^ def", ///// Write the option 4 inside double quotes
 
