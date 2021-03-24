@@ -1,6 +1,3 @@
-### Estimated Time
-1hr 10min
-
 ### Infix and Postfix Introduction
 
 <iframe src="https://www.youtube.com/embed/83RGJ-ESy-s" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
@@ -19,7 +16,7 @@
    - The experiment features a series of modules with video lectures, interactive demonstrations, simulations, hands-on practice exercises and quizzes for self analysis.
 
 
-
+### Experiment Modules & their Weightage
 
 
 |Module   |Weightage 	   | Expectation  |   
