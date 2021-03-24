@@ -149,11 +149,6 @@ correctAnswer: "c"                ///// Write the correct option inside double q
     ];
 
 
-},
-correctAnswer: "a"                ///// Write the correct option inside double quotes
-},
-
-];
 
 
 
