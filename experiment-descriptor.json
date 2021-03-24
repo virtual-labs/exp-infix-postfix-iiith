@@ -125,7 +125,7 @@
 	
 	{
           "unit-type": "task",
-          "label": "Whole Conversion Exercise",
+          "label": "The Whole Conversion Exercise",
           "content-type": "simulation",
           "source": "simulation/infix_to_postfix.html",
           "target": "infix_to_postfix.html"
