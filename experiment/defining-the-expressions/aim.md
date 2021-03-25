@@ -1,5 +1,5 @@
 ### Estimated Time
-10 minutes
+15 minutes
 
 ### Conversion of infix to post fix
 

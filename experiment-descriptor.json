@@ -62,18 +62,8 @@
          "content-type": "assesment",
          "source": "infix-quiz.js",
          "target": "infix-quiz.html"
-       }
-      
-      ]
-    },
-    {
-      "unit-type": "lu",
-      "label": "Infix to Postfix Conversion without Stack",
-      "basedir": "infix-to-postfix-conversion-without-stack",
-      "units": [
-        {
-          "unit-type": "aim"
-        },
+       }, 
+	
 	
 	{
           "unit-type": "task",
@@ -82,9 +72,10 @@
           "source": "algorithm-for-conversion-without-stack.md",
           "target": "algorithm-for-conversion-without-stack.html"
         }
-        
+      
       ]
     },
+    
         {
       "unit-type": "lu",
       "label": "Infix to Postfix Conversion with Stack",

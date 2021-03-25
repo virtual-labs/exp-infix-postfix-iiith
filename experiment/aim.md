@@ -3,7 +3,7 @@
 
 ### Learning Objectives
 
-In this experiment on linked lists we will learn the following topics:
+In this experiment on infix and postfix we will learn the following topics:
 
    - Formal Definitions of Infix and Postfix expressions.
    - Basic concepts behind Infix to Postfix conversion.
