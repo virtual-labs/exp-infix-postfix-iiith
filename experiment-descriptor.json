@@ -15,10 +15,10 @@
     },
     {
       "unit-type": "task",
-      "label": "Pre Test Quiz Instructions",
+      "label": "Recap",
       "content-type": "video",
-      "source": "pre-test.md",
-      "target": "pre-test.html"
+      "source": "recap.md",
+      "target": "recap.html"
     },
     {
       "unit-type": "task",
@@ -58,7 +58,7 @@
         },
       	{
          "unit-type": "task",
-         "label": "Infix Quiz",
+         "label": "Quiz",
          "content-type": "assesment",
          "source": "infix-quiz.js",
          "target": "infix-quiz.html"
@@ -74,13 +74,7 @@
         {
           "unit-type": "aim"
         },
-	{
-          "unit-type": "task",
-          "label": "Overview",
-          "content-type": "video",
-          "source": "overview.md",
-          "target": "overview.html"
-        },
+	
 	{
           "unit-type": "task",
           "label": "Algorithm for Conversion without Stack",
@@ -99,19 +93,13 @@
         {
           "unit-type": "aim"
         },
-	{
-          "unit-type": "task",
-          "label": "Overview",
-          "content-type": "video",
-          "source": "overview.md",
-          "target": "overview.html"
-        },
+	
         {
           "unit-type": "task",
           "label": "Validation of Expressions",
           "content-type": "simulation",
-          "source": "simulation/validation-of-expressions.html",
-          "target": "validation-of-expressions.html"
+          "source": "simulation/demo.html",
+          "target": "demo.html"
         },
         {
           "unit-type": "task",
@@ -120,13 +108,6 @@
           "source": "push-and-pop-operations-on-stack.md",
           "target": "push-and-pop-operations-on-stack.html"
         },
-        {
-          "unit-type": "task",
-          "label": "Push and Pop operations Practice",
-          "content-type": "simulation",
-          "source": "simulation/push-and-pop-operations-practice.html",
-          "target": "push-and-pop-operations-practice.html"
-        },
 	{
           "unit-type": "task",
           "label": "The Whole Conversion",
@@ -134,12 +115,20 @@
           "source": "the-whole-conversion.md",
           "target": "the-whole-conversion.html"
         },
+        {
+          "unit-type": "task",
+          "label": "Push and Pop operations Practice",
+          "content-type": "simulation",
+          "source": "simulation/pushandoutput.html",
+          "target": "pushandoutput.html"
+        },
+	
 	{
           "unit-type": "task",
-          "label": "Whole Conversion Exercise",
+          "label": "The Whole Conversion Exercise",
           "content-type": "simulation",
-          "source": "simulation/whole-conversion-exercise.html",
-          "target": "whole-conversion-exercise.html"
+          "source": "simulation/infix_to_postfix.html",
+          "target": "infix_to_postfix.html"
         }
       ]
     },
@@ -152,13 +141,7 @@
         {
           "unit-type": "aim"
         },
-	{
-          "unit-type": "task",
-          "label": "Overview",
-          "content-type": "video",
-          "source": "overview.md",
-          "target": "overview.html"
-        },
+	
         {
           "unit-type": "task",
           "label": "Evaluation of Postfix Expression",
@@ -170,8 +153,8 @@
           "unit-type": "task",
           "label": "Push and Pop operations Practice",
           "content-type": "simulation",
-          "source": "simulation/postfix-evaluation-exercise.html",
-          "target": "postfix-evaluation-exercise.html"
+          "source": "simulation/postfix_eval.html",
+          "target": "postfix_eval.html"
         }
 	
       ]
