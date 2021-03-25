@@ -44,14 +44,14 @@
         },
 	{
           "unit-type": "task",
-          "label": "Introducing Infix Expressions",
+          "label": "Infix Expressions",
           "content-type": "video",
           "source": "introducing-infix-expressions.md",
           "target": "introducing-infix-expressions.html"
         },
         {
           "unit-type": "task",
-          "label": "Introducing Postfix Expressions",
+          "label": "Postfix Expressions",
           "content-type": "video",
           "source": "introducing-postfix-expressions.md",
           "target": "introducing-postfix-expressions.html"
