@@ -13,13 +13,7 @@
       "source": "overview.md",
       "target": "overview.html"
     },
-    {
-      "unit-type": "task",
-      "label": "Recap",
-      "content-type": "video",
-      "source": "recap.md",
-      "target": "recap.html"
-    },
+    
     {
       "unit-type": "task",
       "label": "Pre Test Quiz",
@@ -37,21 +31,21 @@
         },
         {
           "unit-type": "task",
-          "label": "Overview",
+          "label": "Concept",
           "content-type": "video",
           "source": "overview.md",
           "target": "overview.html"
         },
 	{
           "unit-type": "task",
-          "label": "Introducing Infix Expressions",
+          "label": "Infix Expressions",
           "content-type": "video",
           "source": "introducing-infix-expressions.md",
           "target": "introducing-infix-expressions.html"
         },
         {
           "unit-type": "task",
-          "label": "Introducing Postfix Expressions",
+          "label": "Postfix Expressions",
           "content-type": "video",
           "source": "introducing-postfix-expressions.md",
           "target": "introducing-postfix-expressions.html"
@@ -62,18 +56,8 @@
          "content-type": "assesment",
          "source": "infix-quiz.js",
          "target": "infix-quiz.html"
-       }
-      
-      ]
-    },
-    {
-      "unit-type": "lu",
-      "label": "Infix to Postfix Conversion without Stack",
-      "basedir": "infix-to-postfix-conversion-without-stack",
-      "units": [
-        {
-          "unit-type": "aim"
-        },
+       }, 
+	
 	
 	{
           "unit-type": "task",
@@ -82,9 +66,10 @@
           "source": "algorithm-for-conversion-without-stack.md",
           "target": "algorithm-for-conversion-without-stack.html"
         }
-        
+      
       ]
     },
+    
         {
       "unit-type": "lu",
       "label": "Infix to Postfix Conversion with Stack",
@@ -96,7 +81,7 @@
 	
         {
           "unit-type": "task",
-          "label": "Validation of Expressions",
+          "label": "Validation of Expressions Demo",
           "content-type": "simulation",
           "source": "simulation/demo.html",
           "target": "demo.html"
@@ -151,7 +136,7 @@
         },
         {
           "unit-type": "task",
-          "label": "Push and Pop operations Practice",
+          "label": "Postfix Evaluation Exercise",
           "content-type": "simulation",
           "source": "simulation/postfix_eval.html",
           "target": "postfix_eval.html"

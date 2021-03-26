@@ -1,9 +1,9 @@
 ### Estimated Time
 1hr 10min
 
-### Learning Objectives
+### Learning Objectives of this Experiment
 
-In this experiment on linked lists we will learn the following topics:
+In this experiment we will be able to learn the following topics  :
 
    - Formal Definitions of Infix and Postfix expressions.
    - Basic concepts behind Infix to Postfix conversion.
