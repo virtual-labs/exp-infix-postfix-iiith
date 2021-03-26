@@ -13,13 +13,7 @@
       "source": "overview.md",
       "target": "overview.html"
     },
-    {
-      "unit-type": "task",
-      "label": "Recap",
-      "content-type": "video",
-      "source": "recap.md",
-      "target": "recap.html"
-    },
+    
     {
       "unit-type": "task",
       "label": "Pre Test Quiz",
