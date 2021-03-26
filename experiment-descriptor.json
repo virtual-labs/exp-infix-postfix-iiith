@@ -37,7 +37,7 @@
         },
         {
           "unit-type": "task",
-          "label": "Overview",
+          "label": "Concept",
           "content-type": "video",
           "source": "overview.md",
           "target": "overview.html"
@@ -87,7 +87,7 @@
 	
         {
           "unit-type": "task",
-          "label": "Validation of Expressions",
+          "label": "Validation of Expressions Demo",
           "content-type": "simulation",
           "source": "simulation/demo.html",
           "target": "demo.html"
@@ -142,7 +142,7 @@
         },
         {
           "unit-type": "task",
-          "label": "Push and Pop operations Practice",
+          "label": "Postfix Evaluation Exercise",
           "content-type": "simulation",
           "source": "simulation/postfix_eval.html",
           "target": "postfix_eval.html"
