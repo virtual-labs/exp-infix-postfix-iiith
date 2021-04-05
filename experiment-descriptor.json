@@ -13,14 +13,6 @@
       "source": "overview.md",
       "target": "overview.html"
     },
-    
-    {
-      "unit-type": "task",
-      "label": "Pre Test Quiz",
-      "content-type": "assesment",
-      "source": "pretest.js",
-      "target": "pretest.html"
-    },
     {
       "unit-type": "lu",
       "label": "Defining the Expressions",
@@ -50,13 +42,6 @@
           "source": "introducing-postfix-expressions.md",
           "target": "introducing-postfix-expressions.html"
         },
-      	{
-         "unit-type": "task",
-         "label": "Quiz",
-         "content-type": "assesment",
-         "source": "infix-quiz.js",
-         "target": "infix-quiz.html"
-       }, 
 	
 	
 	{
@@ -144,15 +129,6 @@
 	
       ]
     },
-    
-    {
-      "unit-type": "task",
-      "label": "Post Test Quiz",
-      "content-type": "assesment",
-      "source": "posttest.js",
-      "target": "posttest.html"
-    },
-       
     {
       "unit-type": "task",
       "label": "Further Readings/References",
