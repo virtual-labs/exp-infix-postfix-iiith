@@ -1,0 +1,81 @@
+    <!DOCTYPE HTML>
+    <html lang="en">
+      <head>
+          <title>Infix to Postfix</title>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <link rel="stylesheet" type="text/css" href="http://exp-iiith.vlabs.ac.in/styles/common-styles.css">
+          <link rel="stylesheet" href="../css/pushandoutput_styles.css">
+          <link rel="stylesheet" href="../css/styles.css">
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/4.4.2/math.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/4.4.2/math.min.js"></script>
+      </head>
+      <body onload="generate()">
+        <div id="instructionbox" class="instruction-box">
+          <button class="collapsible">Instructions</button>
+          <div class="content">
+            <ul><li>Put parenthesis at appropriate places following operator precedence to validate the expression.</li>
+            <li>The next part of the question appears only if the previous part is correct.</li></ul>
+          </div>
+        </div>
+        <div class="wrapper">
+          <div id="validate_infix">
+            <div id="01">
+              <p id="questionid1" class="question"></p>
+              <input id="infix_expression" class="text-box">
+            </div>
+            <div id="02">
+              <p id="questionid2" class="question">
+              <b>Question:</b> (Part 2) Select all the elements that have to be pushed into the stack (irrespective of the order).</p>
+              <div id="infix_to_postfix_1">
+                <button id="0" class="exercise_buttons_1:unselected" type="button"></button>
+                <button id="1" class="exercise_buttons_1:unselected" type="button"></button>
+                <button id="2" class="exercise_buttons_1:unselected" type="button"></button>
+                <button id="3" class="exercise_buttons_1:unselected" type="button"></button>
+                <button id="4" class="exercise_buttons_1:unselected" type="button"></button>
+                <button id="5" class="exercise_buttons_1:unselected" type="button"></button>
+                <button id="6" class="exercise_buttons_1:unselected" type="button"></button>
+                <button id="7" class="exercise_buttons_1:unselected" type="button"></button>
+                <button id="8" class="exercise_buttons_1:unselected" type="button"></button>
+                <button id="9" class="exercise_buttons_1:unselected" type="button"></button>
+                <button id="10" class="exercise_buttons_1:unselected" type="button"></button>
+                <button id="11" class="exercise_buttons_1:unselected" type="button"></button>
+                <button id="12" class="exercise_buttons_1:unselected" type="button"></button>
+              </div>
+            </div>
+            <div id="03">
+              <p id="questionid3" class="question">
+              <b>Question:</b> (Part 3) Select all the elements that have to be moved to output expression (irrespective of the order).</p>
+              <div id="infix_to_postfix_2">
+                <button id="13" class="exercise_buttons_2:unselected" type="button"></button>
+                <button id="14" class="exercise_buttons_2:unselected" type="button"></button>
+                <button id="15" class="exercise_buttons_2:unselected" type="button"></button>
+                <button id="16" class="exercise_buttons_2:unselected" type="button"></button>
+                <button id="17" class="exercise_buttons_2:unselected" type="button"></button>
+                <button id="18" class="exercise_buttons_2:unselected" type="button"></button>
+                <button id="19" class="exercise_buttons_2:unselected" type="button"></button>
+                <button id="20" class="exercise_buttons_2:unselected" type="button"></button>
+                <button id="21" class="exercise_buttons_2:unselected" type="button"></button>
+                <button id="22" class="exercise_buttons_2:unselected" type="button"></button>
+                <button id="23" class="exercise_buttons_2:unselected" type="button"></button>
+                <button id="24" class="exercise_buttons_2:unselected" type="button"></button>
+                <button id="25" class="exercise_buttons_2:unselected" type="button"></button>
+              </div>
+            </div>
+          </div>
+          <div id="comments">
+            <p><b>Observations:</b></p>
+            <p id="ins"> </p>
+          </div>
+          <div id="controller">
+            <button type="button" class = "button-input" id="restart_button">Reset</button>
+            <button id="question" class="button-input" name="generate_random_infix" type="button">New Question</button>
+            <button type="button" class = "button-input" id="validate_button">Validate</button>
+            <button type="button" class = "button-input" id="check_button">Check</button>
+          </div>
+            <script src="../js/pushandoutput.js"></script>
+            <script src="http://exp-iiith.vlabs.ac.in/styles/instruction-box.js"></script>
+        </div>
+      </body>
+    </html>

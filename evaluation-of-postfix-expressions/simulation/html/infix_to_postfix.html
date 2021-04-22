@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+      <title>Infix to Postfix</title>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" type="text/css" href="http://exp-iiith.vlabs.ac.in/styles/common-styles.css">
+      <link rel="stylesheet" href="../css/infix_to_postfix_styles.css">
+      <link rel="stylesheet" href="../css/styles.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/4.4.2/math.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/4.4.2/math.min.js"></script>
+  </head>
+  <body onload="generate()">
+    <div id="instructionbox" class="instruction-box">
+      <button class="collapsible"> Instructions </button>
+      <div class ="content">
+        <ul><li>Push the ‘(‘ and operators onto stack and output all numbers. </li>
+        <li>If the scanned element is ‘)’, pop and output from stack till an ‘(‘ is encountered. </li>
+        <li>Repeat steps 1 and 2, then pop and output the stack till it is empty.</li>
+        <li>For popping out elements first click on pop then click on given options to perform the operation.</li></ul>
+      </div>
+    </div>
+    <div class="wrapper">
+      <p id="questionid" class="question"></p>
+      <div id="infix_to_postfix">
+        <div id="column">
+          <input id="pushtostack" placeholder="Type" class="text-box">
+          <button id="push_tostack_button" class="button-input" type="button">Push</button>
+          <p id="push_to_stack_text">Push to Stack</p>
+        </div>
+        <div id="column">
+          <div id="row1">
+            <button id="pop_button" class="button-input" type="button">Pop</button>
+          </div>
+          <div id="column1">
+            <input id="tooutput" class="radio_button" type="radio" value="">
+            <p id="tooutputtext">To Output</p>
+          </div>
+          <div id="column2">
+            <input id="toignore" class="radio_button" type="radio" value="">
+            <p id="toignoretext">To Ignore</p>
+          </div>
+          <div id="row1">
+            <canvas id="canvas_for_conversion" width="500" height="600"></canvas>
+          </div>
+        </div>
+        <div id="column">
+          <input id="typetooutput" placeholder="Type" type="number" class="text-box">
+          <button id="type_tooutput_button" class="button-input" type="button">Output</button>
+          <p id="to_output">Type to output</p>
+          <p id="output"><span style='font-weight:bold;'>Output:</span></p>
+        </div>
+      </div>
+      <div id="comments">
+        <p><b>Observations:</b></p>
+        <p id="correct" class=""></p>
+        <p id="wrong" class=""></p>
+      </div>
+      <div id="controller">
+        <button type="reset" class="button-input" id="restart_button">Reset</button>
+        <button id="question" class="button-input" name="generate_random_infix" type="button">New Question</button>
+        <button type="button" class="button-input" id="check_button">Check</button>
+        <script src="../js/infix_to_postfix.js"></script>
+        <script src="../js/check_postfix.js"></script>
+        <script src="http://exp-iiith.vlabs.ac.in/styles/instruction-box.js"></script>
+      </div>
+    </div>
+  </body>
+</html>
