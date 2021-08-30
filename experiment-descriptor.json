@@ -13,6 +13,14 @@
       "source": "overview.md",
       "target": "overview.html"
     },
+    
+    {
+      "unit-type": "task",
+      "label": "Pre Test Quiz",
+      "content-type": "assesment",
+      "source": "pretest.json",
+      "target": "pretest.html"
+    },
     {
       "unit-type": "lu",
       "label": "Defining the Expressions",
@@ -42,6 +50,13 @@
           "source": "introducing-postfix-expressions.md",
           "target": "introducing-postfix-expressions.html"
         },
+      	{
+         "unit-type": "task",
+         "label": "Quiz",
+         "content-type": "assesment",
+         "source": "infix-quiz.json",
+         "target": "infix-quiz.html"
+       }, 
 	
 	
 	{
@@ -92,8 +107,14 @@
           "source": "simulation/pushandoutput.html",
           "target": "pushandoutput.html"
         },
-	
-	{
+        {
+          "unit-type": "task",
+          "label": "Quiz",
+          "content-type": "assesment",
+          "source": "conversion-without-stack-quiz.json",
+          "target": "conversion-without-stack-quiz.html"
+        },
+      	{
           "unit-type": "task",
           "label": "The Whole Conversion Exercise",
           "content-type": "simulation",
@@ -129,6 +150,15 @@
 	
       ]
     },
+    
+    {
+      "unit-type": "task",
+      "label": "Post Test Quiz",
+      "content-type": "assesment",
+      "source": "posttest.json",
+      "target": "posttest.html"
+    },
+       
     {
       "unit-type": "task",
       "label": "Further Readings/References",

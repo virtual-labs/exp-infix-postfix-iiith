@@ -5,7 +5,7 @@
             "question": "1. Why is there a need to convert from infix to postfix and then evaluate, instead of directly evaluating infix?",
             "answers": {
                 "a": "It is easier to read for humans",
-                "b": "It is easier to <a href =\u201dhttps",
+                "b": "It is easier to It is easier to <a href =\"https://en.wikipedia.org/wiki/Parsing\">parse</a> (be read by computer).",
                 "c": "Both a and b",
                 "d": "None of these."
             },
