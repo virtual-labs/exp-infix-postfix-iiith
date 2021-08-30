@@ -4,7 +4,7 @@ input {
   border-left-width:0px;
   border-bottom-width: 2px;
   border-bottom-color: black;
-  font-size: 1.5vw;
+  /* font-size: 1.5vw; */
 }
 #output {
   color       : rgba(0, 0, 0, 1.0);
@@ -38,7 +38,7 @@ canvas {
   height: 3vw;
   width: 3vw;
   color: white;
-  font-size: 1.5vw;
+  /* font-size: 1.5vw; */
 }
 #column {
   float: left;
@@ -67,5 +67,5 @@ canvas {
 #comments{
   text-align: center;
   height: 10vh;
-  font-size: 1.5vw;
+  /* font-size: 1.5vw; */
 }

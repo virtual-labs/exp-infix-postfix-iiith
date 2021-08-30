@@ -34,7 +34,7 @@ body {
     position: absolute;
     margin      : 0;
     border      : 0px;
-    font-size   : 1.5vw;
+    /* font-size   : 1.5vw; */
     font-family : "OpenSans-Regular", Helvetica, Arial, serif;
     transform           : rotate(0deg);
 }
@@ -68,7 +68,7 @@ body {
     padding: 1%;
     text-align: center;
     text-decoration: none;
-    font-size: 1.5vw;
+    /* font-size: 1.5vw; */
     font-family: arial;
     margin-left: 1%;
     margin-right: 1%;
@@ -87,6 +87,6 @@ body {
     position: relative;
     border: 1px solid grey;
     font-family: arial;
-    font-size:1.5vw;
+    /* font-size:1.5vw; */
     float: none;
 }
