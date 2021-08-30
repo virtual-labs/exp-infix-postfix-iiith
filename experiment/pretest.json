@@ -1,1 +1,70 @@
-[{"question":"1. What does push operation on a stack do?","answers":{"a":"Adds an element to the bottom of the stack. ","b":"Adds an element to the top of the stack.","c":"Removes an element from the top of the stack. ","d":"Teacher mugs up all students names. "},"correctAnswer":"b"},{"question":"2. Situation: A teacher wants to remember the names of all students in the class. Which of the following best possible way to use the linked list in this situation? ","answers":{"a":"Teacher mugs up all students names. ","b":"Teacher asks her favorite student to mug up all others names and help her whenever needed. ","c":"Teacher asks each student to remember the person sitting next to him/her and the teacher will only have to remember the first person's name. ","d":" Teacher asks all students to mug every other student's name."},"correctAnswer":"c"},{"question":"3. Situation: A teacher wants to remember the names of all students in the class. In the aforementioned question, what are the pros and cons using linked list faced by the teacher? ","answers":{"a":"It minimizes her effort.","b":"To access a student's name it will take a lot of time. ","c":"Both a and b","d":" None of these "},"correctAnswer":"c"},{"question":"4. Which of the following best describes a stack?","answers":{"a":"People standing at Starbucks.","b":"A family tree ","c":"A football team ","d":"Water in water bottle"},"correctAnswer":"d"},{"question":"5. On what principle objects are inserted and removed in stacks?","answers":{"a":"LIFO","b":"FIFO","c":"Both a and b ","d":"None of These "},"correctAnswer":"a"}]
+{
+    "version": 2.0,
+    "questions": [
+        {
+            "question": "1. What does push operation on a stack do?",
+            "answers": {
+                "a": "Adds an element to the bottom of the stack.",
+                "b": "Adds an element to the top of the stack.",
+                "c": "Removes an element from the top of the stack.",
+                "d": "Adds an element in the middle of the stack."
+            },
+            "correctAnswer": "b",
+            "explanations": {},
+            "difficulty": "beginner"
+        },
+        {
+            "question": "2. Situation: A teacher wants to remember the names of all students in the class. Which of the following is the best possible way to use the linked list in this situation?",
+            "answers": {
+                "a": "Teacher memorizes all students' names.",
+                "b": "Teacher asks her favorite student to memorize all others names and help her whenever needed.",
+                "c": "Teacher asks each student to remember the person sitting next to him/her and the teacher will only have to remember the  first person's name.",
+                "d": "Teacher asks all students to memorize every other student's name."
+            },
+            "correctAnswer": "c",
+            "explanations": {},
+            "difficulty": "intermediate"
+        },
+        {
+            "question": "3. Situation: A teacher wants to remember the names of all students in the class. In the aforementioned question, what are the pros and cons of using a linked list faced by the teacher?",
+            "answers": {
+                "a": "It minimizes her effort.",
+                "b": "To access a student's name it will take a lot of time.",
+                "c": "Both a and b",
+                "d": "None of these"
+            },
+            "correctAnswer": "c",
+            "explanations": {},
+            "difficulty": "intermediate"
+        },
+        {
+            "question": "4. Which of the following best describes a stack?",
+            "answers": {
+                "a": "People standing at Starbucks.",
+                "b": "A family tree",
+                "c": "A football team",
+                "d": "Set of dinner plates placed on top of each other"
+            },
+            "correctAnswer": "d",
+            "explanations": {
+                "a": "People standing at starbucks would be waiting in line, the first in line would be the first to get their coffee. This is an example of a queue hence the wrong answer.",
+                "b": "A family tree keeps diverging creating branches at every generation, forming a typical example of tree data structure, and hence wrong.",
+                "c": "A football team is just a collection of players with no specific intentions in mind. Hence they would be classified into an array or a list which makes for a collection of items. And hence is the wrong answer.",
+                "d": "To add to the plates we can only put the plate on the top, and to take on the plate, we can only still take from the top. Hence this is a classic example of Last in First Out (LIFO), a Stack and is also the correct answer"
+            },
+            "difficulty": "intermediate"
+        },
+        {
+            "question": "5. On what principle are objects inserted and removed in stacks?",
+            "answers": {
+                "a": "LIFO",
+                "b": "FIFO",
+                "c": "LILO",
+                "d": "None of These"
+            },
+            "correctAnswer": "a",
+            "explanations": {},
+            "difficulty": "beginner"
+        }
+    ]
+}
