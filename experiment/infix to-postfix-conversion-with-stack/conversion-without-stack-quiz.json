@@ -1,0 +1,17 @@
+{
+    "version": 2.0,
+    "questions": [
+        {
+            "question": "1. What is the priority order of operators i.e. the order of precedence of operators",
+            "answers": {
+                "a": "Priority(^) > Priority(/) > Priority(*) > Priority(+) >= Priority(-)",
+                "b": "Priority(/) > Priority(^) > Priority(*) > Priority(+) >= Priority(-)",
+                "c": "Priority(^) > Priority(*) > Priority(/) > Priority(+) >= Priority(-)",
+                "d": "Priority(/) > Priority(*) > Priority(^) > Priority(+) >= Priority(-)"
+            },
+            "correctAnswer": "a",
+            "explanations": {},
+            "difficulty": "intermediate"
+        }
+    ]
+}
