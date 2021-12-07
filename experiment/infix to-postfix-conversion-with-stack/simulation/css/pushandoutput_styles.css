@@ -7,7 +7,7 @@ input {
 #infix_expression {
   display: none;
   margin-left: 37%;
-  font-size: 1.5vw;
+  /* font-size: 1.5vw; */
   text-align: center;
 }
 #questionid1 {
@@ -67,6 +67,6 @@ button[class*=':selected'] {
   padding: 2vw;
   width: 30vw;
   font-family: arial;
-  font-size: 1.5vw;
+  /* font-size: 1.5vw; */
   text-align: center;
 }

@@ -20,7 +20,7 @@ canvas {
     border-radius   : 50vw;
     border-width    : 0px;
     color           :white;
-    font-size       : 1.5vw;
+    /* font-size       : 1.5vw; */
     transform: rotate(0deg);
 }
 #pop_button:hover{
@@ -72,7 +72,7 @@ canvas {
 }
 #pushtostack {
     position: relative;
-    font-size: 1.5vw;
+    /* font-size: 1.5vw; */
     transform           : rotate(0deg);
 }
 #push_tostack_button {
@@ -81,7 +81,7 @@ canvas {
     border-radius   : 50vw;
     border-width    : 0px;
     color           :white;
-    font-size       : 1.5vw;
+    /* font-size       : 1.5vw; */
     transform: rotate(0deg);
     height          : 4vh;
     width           : 6vw;
@@ -101,7 +101,7 @@ canvas {
 }
 #typetooutput {
     position: relative;
-    font-size: 1.5vw;
+    /* font-size: 1.5vw; */
     transform           : rotate(0deg);
 }
 #type_tooutput_button {
@@ -110,7 +110,7 @@ canvas {
     border-radius   : 50vw;
     border-width    : 0px;
     color           :white;
-    font-size       : 1.5vw;
+    /* font-size       : 1.5vw; */
     transform: rotate(0deg);
     height          : 4vh;
     width           : 6vw;
@@ -170,5 +170,5 @@ canvas {
 #comments{
   text-align: center;
   height: 10vh;
-  font-size: 1.5vw;
+  /* font-size: 1.5vw; */
 }
