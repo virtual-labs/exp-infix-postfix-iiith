@@ -3,4 +3,4 @@
 
 ###  Understand Infix to Postfix Expressions
 
-This module helps the better understanding of Infix to Postfix conversion of expressions and evaluation of Postfix expression. 
+This module explains Infix to Postfix conversion of expressions, and the evaluation of Postfix expressions. 
