@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+      <title>Infix to Postfix</title>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" type="text/css" href="http://exp-iiith.vlabs.ac.in/styles/common-styles.css">
+      <link rel="stylesheet" href="../css/postfix_evaluation_styles.css">
+      <link rel="stylesheet" href="../css/styles.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/4.4.2/math.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/4.4.2/math.min.js"></script>
+  </head>
+  <body onload="generate()">
+    <div id="instructionbox" class="instruction-box">
+      <button class="collapsible">Instructions</button>
+      <div class="content">
+        <ul><li>Push the number onto stack as given in the question. </li>
+        <li>Pop two numbers and operate on them.</li>
+        <li>Push the result back onto stack and continue till you have completely evaluated the expression.</li></ul>
+      </div>
+    </div>
+    <div class="wrapper">
+      <p id="questionid" class="question"></p>
+      <div id="create_element">
+        <div id="column">
+            <div id="row1">
+            <input id="numbers" class="text-box" type="tel" placeholder="Enter a number to push" max="999999">
+            <button id="push_button" class="button-input" type="button">Push</button>
+            </div>
+            <div id="row1">
+            <canvas id="stackArray" width="500" height="600">Your browser does not support canvas.</canvas>
+            </div>
+        </div>
+        <div id="column">
+            <div id="row1">
+            <button id="add_button" class="operators" type="button">+</button>
+            <button id="subtract_button" class="operators" type="button">-</button>
+            <button id="multiply_button" class="operators" type="button">*</button>
+            <button id="divide_button" class="operators" type="button">/</button>
+            <button id="exponent_button" class="operators" type="button">^</button>
+            </div>
+            <div id="row2">
+            <button id="pop_button" class="button-input" type="button">Pop</button>
+            <button id="clear_button" class="button-input" type="button">Clear</button>
+            <p id="output"><span style='font-weight:bold;'>Popped Elements:</span></p>
+            </div>
+        </div>
+      </div>
+      <div id="comments">
+        <p><b>Observations:</b></p>
+        <p id="correct" class=""></p>
+        <p id="wrong" class=""></p>
+      </div>
+      <div id="controller">
+        <button type="reset" class="button-input" id="restart_button">Reset</button>
+        <button id="question" class="button-input" name="generate_random_infix" type="button">New Question</button>
+        <button type="button" class="button-input" id="check_button">Check</button>
+        <script src="../js/postfix_eval.js"></script>
+        <script src="../js/check_postfix.js"></script>
+        <script src="../js/function_eval_postfix.js"></script>
+        <script src="http://exp-iiith.vlabs.ac.in/styles/instruction-box.js"></script>
+      </div>
+    </div>
+  </body>
+</html>
