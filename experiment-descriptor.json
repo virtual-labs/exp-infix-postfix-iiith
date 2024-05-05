@@ -2,6 +2,11 @@
   "unit-type": "lu",
   "label": "Infix and Postfix",
   "basedir": ".",
+  "code-assessment": {
+    "include": true,
+    "languages": ["javascript"],
+    "position": 6
+  },
   "units": [
     {
       "unit-type": "aim"
