@@ -1,0 +1,26 @@
+{
+    "version": 1,
+    "experiment name": "Experiment Name",
+    "problems": [
+        {
+            "problem name": "Infix to Postfix",
+            "description": "You are given an infix operation. Use stacks and the algorithm learned to convert the expression into postfix.",
+            "inputs": [
+                "A+B*C+D"
+            ],
+            "expected": "ABC*+D+",
+            "inputs description": "Input consists of an infix sequence of variables and operations",
+            "expected description": "The correct postfix conversion of the given input infix expression"
+        },
+        {
+            "problem name": "Infix to Postfix",
+            "description": "You are given an infix operation. Use stacks and the algorithm learned to convert the expression into postfix.",
+            "inputs": [
+                "((A+B)-C*(D/E))+F"
+            ],
+            "expected": "AB+CDE/*-F+",
+            "inputs description": "Input consists of an infix sequence of variables and operations",
+            "expected description": "The correct postfix conversion of the given input infix expression"
+        }
+    ]
+}
