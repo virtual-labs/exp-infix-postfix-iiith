@@ -3,6 +3,17 @@
     "experiment name": "Experiment Name",
     "problems": [
         {
+            "problem name": "Basic Infix to Postfix Conversion",
+            "description": "You are given a simple infix expression consisting of single-digit numbers and the '+' and '*' operators. Convert the infix expression to postfix notation using the Shunting Yard algorithm.",
+            "inputs": [
+                "2+3*4"
+            ],
+            "expected": "234*+",
+            "inputs description": "A string representing an infix expression with single-digit numbers and the operators '+' and '*'.",
+            "expected description": "A string representing the postfix conversion of the given infix expression.",
+            "difficulty": "beginner"
+        },
+        {
             "problem name": "Infix to Postfix",
             "description": "You are given an infix operation. Use stacks and the algorithm learned to convert the expression into postfix.",
             "inputs": [
@@ -10,17 +21,20 @@
             ],
             "expected": "ABC*+D+",
             "inputs description": "Input consists of an infix sequence of variables and operations",
-            "expected description": "The correct postfix conversion of the given input infix expression"
+            "expected description": "The correct postfix conversion of the given input infix expression",
+            "difficulty": "intermediate"
         },
         {
-            "problem name": "Infix to Postfix",
-            "description": "You are given an infix operation. Use stacks and the algorithm learned to convert the expression into postfix.",
+            "problem name": "Evaluate Postfix Expression",
+            "description": "You are given a postfix expression containing multi-digit numbers and the operators '+', '-', '*', '/'. Evaluate the expression and return the result.",
             "inputs": [
-                "((A+B)-C*(D/E))+F"
+                ["12", "3", "/", "5", "2", "*", "+"]
             ],
-            "expected": "AB+CDE/*-F+",
-            "inputs description": "Input consists of an infix sequence of variables and operations",
-            "expected description": "The correct postfix conversion of the given input infix expression"
+            "expected": 10,
+            "inputs description": "An array of strings representing a postfix expression, where each string is either a multi-digit number or one of the operators '+', '-', '*', '/'.",
+            "expected description": "An integer representing the evaluated result of the postfix expression.",
+            "difficulty": "advanced"
         }
+
     ]
 }
