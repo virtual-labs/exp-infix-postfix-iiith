@@ -1,0 +1,19 @@
+{
+  _: [],
+  f: [
+    '/home/runner/work/exp-infix-postfix-iiith/exp-infix-postfix-iiith/experiment/code-assessment.json'
+  ],
+  files: [
+    '/home/runner/work/exp-infix-postfix-iiith/exp-infix-postfix-iiith/experiment/code-assessment.json'
+  ],
+  '$0': 'validate'
+}
+/problems/0/expected: The expected should be an array
+
+/problems/1/expected: The expected should be an array
+
+/problems/2/expected: The expected should be an array
+
+Json Error: must match "then" schema
+Failed while validating /home/runner/work/exp-infix-postfix-iiith/exp-infix-postfix-iiith/experiment/code-assessment.json
+Error: Schema is Invalid

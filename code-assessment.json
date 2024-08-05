@@ -1,0 +1,39 @@
+{
+    "version": 1,
+    "experiment name": "Experiment Name",
+    "problems": [
+        {
+            "problem name": "Infix to Postfix Conversion (Recursive)",
+            "description": "You are given a simple infix expression consisting of single-digit numbers and the + and * operators. Convert the infix expression to postfix notation using a recursive approach without the use of stacks.",
+            "inputs": [
+                "2+3*4"
+            ],
+            "expected": "234*+",
+            "inputs description": "A string representing an infix expression with single-digit numbers and the operators + and *.",
+            "expected description": "A string representing the postfix conversion of the given infix expression.",
+            "difficulty": "beginner"
+        },
+        {
+            "problem name": "Infix to Postfix",
+            "description": "You are given an infix operation. Use stacks and the Shunting Yard algorithm learned to convert the expression into postfix. For more details on the Shunting Yard algorithm, you can refer to the [Wikipedia page](https://en.wikipedia.org/wiki/Shunting_yard_algorithm).",
+            "inputs": [
+                "A+B*C+D"
+            ],
+            "expected": "ABC*+D+",
+            "inputs description": "Input consists of an infix sequence of variables and operations.",
+            "expected description": "The correct postfix conversion of the given input infix expression.",
+            "difficulty": "intermediate"
+        },
+        {
+            "problem name": "Evaluate Postfix Expression",
+            "description": "You are given a postfix expression containing multi-digit numbers and the operators +, -, *, /. Evaluate the expression and return the result.",
+            "inputs": [
+                ["12", "3", "/", "5", "2", "*", "+"]
+            ],
+            "expected": 14,
+            "inputs description": "An array of strings representing a postfix expression, where each string is either a multi-digit number or one of the operators +, -, *, /.",
+            "expected description": "An integer representing the evaluated result of the postfix expression.",
+            "difficulty": "intermediate"
+        }
+    ]
+}
