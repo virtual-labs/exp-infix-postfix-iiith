@@ -23,14 +23,6 @@ function clearCanvas() {
   );
 }
 
-function logObservation(msg) {
-  const obsList = document.getElementById("obs-list");
-  if (!obsList) return; // Prevent error if element not found
-  const li = document.createElement("li");
-  li.innerHTML = msg;
-  obsList.appendChild(li);
-}
-
 function fun() {
   document.getElementById("correct").innerText = "";
   document.getElementById("wrong").innerText = "";
@@ -156,7 +148,6 @@ $("#push_button").on("click", function () {
       document.getElementById("correct").innerText =
         "Pushed " + value + " onto the stack.";
       document.getElementById("wrong").innerText = "";
-      logObservation(`Pushed <b>${value}</b> onto the stack.`);
     } else {
       postfix_artefact.pointer--;
     }
@@ -168,9 +159,6 @@ $("#push_button").on("click", function () {
     document.getElementById("wrong").innerText =
       "Please enter a valid number to push.";
     document.getElementById("correct").innerText = "";
-    logObservation(
-      `<span style="color:red;">Invalid input: Please enter a number.</span>`
-    );
   }
   document.getElementById("numbers").value = "";
 });
@@ -185,13 +173,9 @@ $("#pop_button").on("click", function () {
     document.getElementById("correct").innerText =
       "Popped " + popped + " from the stack.";
     document.getElementById("wrong").innerText = "";
-    logObservation(`Popped <b>${popped}</b> from the stack.`);
   } else {
     document.getElementById("wrong").innerText = "Stack is Empty. Cannot pop.";
     document.getElementById("correct").innerText = "";
-    logObservation(
-      `<span style="color:red;">Stack is empty. Cannot pop.</span>`
-    );
   }
   writeNumbers();
   document.getElementById("numbers").value = "";
@@ -218,9 +202,6 @@ $("#add_button").on("click", function () {
     document.getElementById("wrong").innerText =
       "Need at least two operands to apply +.";
     document.getElementById("correct").innerText = "";
-    logObservation(
-      `<span style="color:red;">Need at least two operands to apply +.</span>`
-    );
     return;
   }
   var b = postfix_artefact.values.pop();
@@ -234,9 +215,6 @@ $("#add_button").on("click", function () {
     "correct"
   ).innerText = `Applied + operator: ${a} + ${b} = ${result}`;
   document.getElementById("wrong").innerText = "";
-  logObservation(
-    `Popped <b>${a}</b> and <b>${b}</b> from the stack.<br>Applied <b>+</b>: <b>${a} + ${b} = ${result}</b>.<br>Pushed <b>${result}</b> onto the stack.`
-  );
 });
 
 $("#clear_button").on("click", function () {
@@ -244,62 +222,90 @@ $("#clear_button").on("click", function () {
   document.getElementById("output").innerHTML =
     "<span style='font-weight:bold;'>Popped Elements:</span> " +
     postfix_artefact.values2.join(" ");
-  document.getElementById("correct").innerText = "Cleared stack.";
+  document.getElementById("correct").innerText = "Cleared popped elements.";
   document.getElementById("wrong").innerText = "";
-  document.getElementById("obs-list").innerHTML = "";
 });
 $("#subtract_button").on("click", function () {
-  var operands = double_pop();
-  postfix_artefact.values2.push(
-    parseFloat((parseFloat(operands[0]) - parseFloat(operands[1])).toFixed(3))
-  );
+  if (postfix_artefact.values.length < 2) {
+    document.getElementById("wrong").innerText =
+      "Need at least two operands to apply -.";
+    document.getElementById("correct").innerText = "";
+    return;
+  }
+  var b = postfix_artefact.values.pop();
+  var a = postfix_artefact.values.pop();
+  var result = parseFloat((parseFloat(a) - parseFloat(b)).toFixed(3));
+  postfix_artefact.values.push(result);
   document.getElementById("output").innerHTML =
-    "<span style='font-weight:bold;'>Popped Elements:</span> " +
-    postfix_artefact.values2.join(" ");
-  document.getElementById("numbers").value = postfix_artefact.values2.join(" ");
+    "<span style='font-weight:bold;'>Popped Elements:</span> " + a + ", " + b;
   writeNumbers();
-  document.getElementById("correct").innerText = "";
+  document.getElementById(
+    "correct"
+  ).innerText = `Applied - operator: ${a} - ${b} = ${result}`;
   document.getElementById("wrong").innerText = "";
 });
 $("#multiply_button").on("click", function () {
-  var operands = double_pop();
-  postfix_artefact.values2.push(
-    parseFloat((parseFloat(operands[0]) * parseFloat(operands[1])).toFixed(3))
-  );
+  if (postfix_artefact.values.length < 2) {
+    document.getElementById("wrong").innerText =
+      "Need at least two operands to apply *.";
+    document.getElementById("correct").innerText = "";
+    return;
+  }
+  var b = postfix_artefact.values.pop();
+  var a = postfix_artefact.values.pop();
+  var result = parseFloat((parseFloat(a) * parseFloat(b)).toFixed(3));
+  postfix_artefact.values.push(result);
   document.getElementById("output").innerHTML =
-    "<span style='font-weight:bold;'>Popped Elements:</span> " +
-    postfix_artefact.values2.join(" ");
-  document.getElementById("numbers").value = postfix_artefact.values2.join(" ");
+    "<span style='font-weight:bold;'>Popped Elements:</span> " + a + ", " + b;
   writeNumbers();
-  document.getElementById("correct").innerText = "";
+  document.getElementById(
+    "correct"
+  ).innerText = `Applied * operator: ${a} * ${b} = ${result}`;
   document.getElementById("wrong").innerText = "";
 });
 $("#divide_button").on("click", function () {
-  var operands = double_pop();
-  postfix_artefact.values2.push(
-    parseFloat((parseFloat(operands[0]) / parseFloat(operands[1])).toFixed(3))
-  );
+  if (postfix_artefact.values.length < 2) {
+    document.getElementById("wrong").innerText =
+      "Need at least two operands to apply /.";
+    document.getElementById("correct").innerText = "";
+    return;
+  }
+  var b = postfix_artefact.values.pop();
+  var a = postfix_artefact.values.pop();
+  if (parseFloat(b) === 0) {
+    document.getElementById("wrong").innerText = "Cannot divide by zero!";
+    document.getElementById("correct").innerText = "";
+    postfix_artefact.values.push(a);
+    postfix_artefact.values.push(b);
+    return;
+  }
+  var result = parseFloat((parseFloat(a) / parseFloat(b)).toFixed(3));
+  postfix_artefact.values.push(result);
   document.getElementById("output").innerHTML =
-    "<span style='font-weight:bold;'>Popped Elements:</span> " +
-    postfix_artefact.values2.join(" ");
-  document.getElementById("numbers").value = postfix_artefact.values2.join(" ");
+    "<span style='font-weight:bold;'>Popped Elements:</span> " + a + ", " + b;
   writeNumbers();
-  document.getElementById("correct").innerText = "";
+  document.getElementById(
+    "correct"
+  ).innerText = `Applied / operator: ${a} / ${b} = ${result}`;
   document.getElementById("wrong").innerText = "";
 });
 $("#exponent_button").on("click", function () {
-  var operands = double_pop();
-  postfix_artefact.values2.push(
-    parseFloat(
-      Math.pow(parseFloat(operands[0]), parseFloat(operands[1])).toFixed(3)
-    )
-  );
+  if (postfix_artefact.values.length < 2) {
+    document.getElementById("wrong").innerText =
+      "Need at least two operands to apply ^.";
+    document.getElementById("correct").innerText = "";
+    return;
+  }
+  var b = postfix_artefact.values.pop();
+  var a = postfix_artefact.values.pop();
+  var result = parseFloat(Math.pow(parseFloat(a), parseFloat(b)).toFixed(3));
+  postfix_artefact.values.push(result);
   document.getElementById("output").innerHTML =
-    "<span style='font-weight:bold;'>Popped Elements:</span> " +
-    postfix_artefact.values2.join(" ");
-  document.getElementById("numbers").value = postfix_artefact.values2.join(" ");
+    "<span style='font-weight:bold;'>Popped Elements:</span> " + a + ", " + b;
   writeNumbers();
-  document.getElementById("correct").innerText = "";
+  document.getElementById(
+    "correct"
+  ).innerText = `Applied ^ operator: ${a} ^ ${b} = ${result}`;
   document.getElementById("wrong").innerText = "";
 });
 $("#restart_button").on("click", function () {
