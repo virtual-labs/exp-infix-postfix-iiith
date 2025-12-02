@@ -31,18 +31,20 @@
             <b>Using the Pop button:</b>
             <ul>
               <li>
-                <b>Step 1:</b> Click the <b>Pop</b> button to remove the top
-                element from the stack.
+                <b>Step 1:</b> <u>First</u>, click the <b>Pop</b> button to
+                remove the top element from the stack.
               </li>
               <li>
-                <b>Step 2:</b> Select <b>To Output</b> radio button if you want
-                to add the popped element to the output (for operators like *,
-                -, /).
+                <b>Step 2:</b> <u>Then</u>, choose either <b>To Output</b> if
+                you want to add the popped element to the output (for operators
+                like *, -, /), or <b>To Ignore</b> if you want to discard the
+                popped element (for closing parenthesis ')').
               </li>
-              <li>
-                <b>Step 2 (Alternative):</b> Select <b>To Ignore</b> radio
-                button if you want to discard the popped element (for closing
-                parenthesis ')').
+              <li style="color: #c00">
+                <b>Important:</b> Always click <b>Pop</b> first, then choose
+                <b>To Output</b> or <b>To Ignore</b>. If you click
+                <b>To Output</b> or <b>To Ignore</b> before <b>Pop</b>, nothing
+                will happen.
               </li>
             </ul>
           </li>
@@ -81,12 +83,14 @@
             </button>
           </div>
           <div id="column1">
-            <input id="tooutput" class="radio_button" type="radio" value="" />
-            <p id="tooutputtext">To Output</p>
+            <button id="tooutput" class="button-input" type="button">
+              To Output
+            </button>
           </div>
           <div id="column2">
-            <input id="toignore" class="radio_button" type="radio" value="" />
-            <p id="toignoretext">To Ignore</p>
+            <button id="toignore" class="button-input" type="button">
+              To Ignore
+            </button>
           </div>
           <div id="row1">
             <canvas
@@ -116,20 +120,22 @@
         <p id="wrong" class=""></p>
       </div>
       <div id="controller">
-        <button type="reset" class="button-input" id="restart_button">
-          Reset
-        </button>
-        <button
-          id="question"
-          class="button-input"
-          name="generate_random_infix"
-          type="button"
-        >
-          New Question
-        </button>
-        <button type="button" class="button-input" id="check_button">
-          Check
-        </button>
+        <div class="bottom-action-row">
+          <button type="reset" class="button-input" id="restart_button">
+            Reset
+          </button>
+          <button
+            id="question"
+            class="button-input"
+            name="generate_random_infix"
+            type="button"
+          >
+            New Question
+          </button>
+          <button type="button" class="button-input" id="check_button">
+            Check
+          </button>
+        </div>
         <script src="js/infix_to_postfix.js"></script>
         <script src="js/check_postfix.js"></script>
         <script src="../../assets/js/instruction-box.js"></script>
