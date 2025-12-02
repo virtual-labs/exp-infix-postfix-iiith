@@ -1,0 +1,44 @@
+{
+    "version": 2.0,
+    "questions": [
+        {
+            "question": "1. A postfix expression is also called ______.",
+            "answers": {
+                "a": "RPN",
+                "b": "PN",
+                "c": "DNP",
+                "d": "GNP"
+            },
+            "correctAnswer": "a",
+            "explanations": {
+                "a": "Reverse Polish Notation, also Post Polish Notation is another name for Postfix Expressions.",
+                "b": "Polish notation is simply the opposite of PostFix, as PostPolish is Post fix."
+            },
+            "difficulty": "intermediate"
+        },
+        {
+            "question": "2. Expression in which the Operator is written after Operand is called as _______.",
+            "answers": {
+                "a": "Infix Expression",
+                "b": "Postfix Expression",
+                "c": "Prefix Expression",
+                "d": "None of these"
+            },
+            "correctAnswer": "b",
+            "explanations": {},
+            "difficulty": "beginner"
+        },
+        {
+            "question": "3. Which of the following is an Infix Expression?",
+            "answers": {
+                "a": "b * c + d / e",
+                "b": "b*cde/+",
+                "c": "+ + A * B C D",
+                "d": "ABD*C++"
+            },
+            "correctAnswer": "a",
+            "explanations": {},
+            "difficulty": "beginner"
+        }
+    ]
+}

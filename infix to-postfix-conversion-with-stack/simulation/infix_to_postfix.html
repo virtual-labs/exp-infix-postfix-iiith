@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Infix to Postfix</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="../../assets/css/common-styles-responsive.css"
+    />
+    <link rel="stylesheet" href="css/infix_to_postfix_styles.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/4.4.2/math.min.js"></script>
+  </head>
+  <body onload="generate()">
+    <div id="instructionbox" class="instruction-box">
+      <button class="collapsible">Instructions</button>
+      <div class="content">
+        <ul>
+          <li>
+            <b>Numbers:</b> Type the number in "Type to output" box and click
+            <b>Output</b> button to add it directly to the output.
+          </li>
+          <li>
+            <b>Opening parenthesis '(' and operators (+, -, *, /):</b> Type in
+            "Push to Stack" box and click <b>Push</b> button to add to the
+            stack.
+          </li>
+          <li>
+            <b>Using the Pop button:</b>
+            <ul>
+              <li>
+                <b>Step 1:</b> <u>First</u>, click the <b>Pop</b> button to
+                remove the top element from the stack.
+              </li>
+              <li>
+                <b>Step 2:</b> <u>Then</u>, choose either <b>To Output</b> if
+                you want to add the popped element to the output (for operators
+                like *, -, /), or <b>To Ignore</b> if you want to discard the
+                popped element (for closing parenthesis ')').
+              </li>
+              <li style="color: #c00">
+                <b>Important:</b> Always click <b>Pop</b> first, then choose
+                <b>To Output</b> or <b>To Ignore</b>. If you click
+                <b>To Output</b> or <b>To Ignore</b> before <b>Pop</b>, nothing
+                will happen.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <b>When you encounter ')':</b> Pop the operator and select "To
+            Output", then pop again and select "To Ignore" to remove the
+            matching '('.
+          </li>
+          <li>
+            <b>Final step:</b> Click <b>Check</b> button to verify if your
+            postfix conversion is correct.
+          </li>
+        </ul>
+        <p>
+          <b>Example:</b> For expression ( 5 + 3 ), the steps are: <br />1. Push
+          '(' → Push '+' → Output 5 → Output 3 <br />2. Pop and select "To
+          Output" (outputs '+') → Pop and select "To Ignore" (removes '(')
+          <br />3. Final output: 5 3 +
+        </p>
+      </div>
+    </div>
+    <div class="wrapper">
+      <p id="questionid" class="question"></p>
+      <div id="infix_to_postfix">
+        <div id="column">
+          <input id="pushtostack" placeholder="Type" class="text-box" />
+          <button id="push_tostack_button" class="button-input" type="button">
+            Push
+          </button>
+          <p id="push_to_stack_text">Push to Stack</p>
+        </div>
+        <div id="column">
+          <div id="row1">
+            <button id="pop_button" class="button-input" type="button">
+              Pop
+            </button>
+          </div>
+          <div id="column1">
+            <button id="tooutput" class="button-input" type="button">
+              To Output
+            </button>
+          </div>
+          <div id="column2">
+            <button id="toignore" class="button-input" type="button">
+              To Ignore
+            </button>
+          </div>
+          <div id="row1">
+            <canvas
+              id="canvas_for_conversion"
+              width="500"
+              height="600"
+            ></canvas>
+          </div>
+        </div>
+        <div id="column">
+          <input
+            id="typetooutput"
+            placeholder="Type"
+            type="text"
+            class="text-box"
+          />
+          <button id="type_tooutput_button" class="button-input" type="button">
+            Output
+          </button>
+          <p id="to_output">Type to output</p>
+          <p id="output"><span style="font-weight: bold">Output:</span></p>
+        </div>
+      </div>
+      <div id="comments">
+        <p><b>Observations:</b></p>
+        <p id="correct" class=""></p>
+        <p id="wrong" class=""></p>
+      </div>
+      <div id="controller">
+        <div class="bottom-action-row">
+          <button type="reset" class="button-input" id="restart_button">
+            Reset
+          </button>
+          <button
+            id="question"
+            class="button-input"
+            name="generate_random_infix"
+            type="button"
+          >
+            New Question
+          </button>
+          <button type="button" class="button-input" id="check_button">
+            Check
+          </button>
+        </div>
+        <script src="js/infix_to_postfix.js"></script>
+        <script src="js/check_postfix.js"></script>
+        <script src="../../assets/js/instruction-box.js"></script>
+      </div>
+    </div>
+  <script src="../../assets/js/iframeResize.js"></script>
+        
+        </body>
+</html>

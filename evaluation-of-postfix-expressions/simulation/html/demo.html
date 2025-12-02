@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <title>Validation of Expression</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="http://exp-iiith.vlabs.ac.in/styles/common-styles.css">
+    <script src="http://exp-iiith.vlabs.ac.in/styles/instruction-box.js"></script>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/demo_styles.css">
+    <script src="../js/demo.js"></script>
+  </head>
+  <body onload="generate();fun();">
+    <div class="instruction-box">
+      <button class="collapsible"> Instructions </button>
+      <div class ="content">
+        <ul><li>The brackets which are in <span style="font-weight:bold;color:#fd6d00">()</span> are the one added in that step</li>
+        <li>Click on the <b>Start</b> button to start the demo.</li>
+        <li>Move the slider to adjust the speed of the demo.</li>
+        <li>Click on the <b>Pause</b> button if you want to stop and manually click the <b>Next</b> button to have a step by step realization of the process.</li>
+        <li>Click on the <b>Reset</b> button to start all over with a new expression!</li></ul>
+      </div>
+    </div> 
+    <div class="wrapper"> 
+      <p id="questionid"></p>
+      <p id="validation"></p>
+      <div id="comments">
+        <p><b>Observations:</b></p>
+        <p id="ins"> </p>
+      </div>
+      <div class="slidecontainer">
+        <p id="slide_demo">Min. Speed <input type="range" min="100" max="2500" id="interval" class="slider_input" value="1500"> Max. Speed </p>
+      </div>
+      <div id="buttondiv">
+        <button type="button" class="button-input" id="start" >Start</button>
+        <button type="button" class="button-input" id="reset">Reset</button>
+        <button type="button" class="button-input" id="pause">Pause</button>
+      </div>
+      <script src="http://exp-iiith.vlabs.ac.in/styles/instruction-box.js"></script>
+    </div>
+  </body>
+</html>

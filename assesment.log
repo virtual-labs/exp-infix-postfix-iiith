@@ -1,0 +1,64 @@
+=/pretest.json
+{
+  _: [],
+  f: [
+    '/home/runner/work/exp-infix-postfix-iiith/exp-infix-postfix-iiith/experiment/pretest.json'
+  ],
+  files: [
+    '/home/runner/work/exp-infix-postfix-iiith/exp-infix-postfix-iiith/experiment/pretest.json'
+  ],
+  c: 'assessment',
+  contentTypes: 'assessment',
+  'content-types': 'assessment',
+  '$0': 'validate'
+}
+Validated true
+=/defining-the-expressions/infix-quiz.json
+{
+  _: [],
+  f: [
+    '/home/runner/work/exp-infix-postfix-iiith/exp-infix-postfix-iiith/experiment/defining-the-expressions/infix-quiz.json'
+  ],
+  files: [
+    '/home/runner/work/exp-infix-postfix-iiith/exp-infix-postfix-iiith/experiment/defining-the-expressions/infix-quiz.json'
+  ],
+  c: 'assessment',
+  contentTypes: 'assessment',
+  'content-types': 'assessment',
+  '$0': 'validate'
+}
+Validated true
+=/infix to-postfix-conversion-with-stack/conversion-without-stack-quiz.json
+{
+  _: [],
+  f: [
+    '/home/runner/work/exp-infix-postfix-iiith/exp-infix-postfix-iiith/experiment/infix',
+    'to-postfix-conversion-with-stack/conversion-without-stack-quiz.json'
+  ],
+  files: [
+    '/home/runner/work/exp-infix-postfix-iiith/exp-infix-postfix-iiith/experiment/infix',
+    'to-postfix-conversion-with-stack/conversion-without-stack-quiz.json'
+  ],
+  c: 'assessment',
+  contentTypes: 'assessment',
+  'content-types': 'assessment',
+  '$0': 'validate'
+}
+/home/runner/work/exp-infix-postfix-iiith/exp-infix-postfix-iiith/experiment/infix
+Failed while validating /home/runner/work/exp-infix-postfix-iiith/exp-infix-postfix-iiith/experiment/infix
+Error: File does not exist
+=/posttest.json
+{
+  _: [],
+  f: [
+    '/home/runner/work/exp-infix-postfix-iiith/exp-infix-postfix-iiith/experiment/posttest.json'
+  ],
+  files: [
+    '/home/runner/work/exp-infix-postfix-iiith/exp-infix-postfix-iiith/experiment/posttest.json'
+  ],
+  c: 'assessment',
+  contentTypes: 'assessment',
+  'content-types': 'assessment',
+  '$0': 'validate'
+}
+Validated true
