@@ -28,6 +28,7 @@ function clear() {
   document.getElementById("correct").innerHTML = "";
   document.getElementById("toignore").checked = false;
   document.getElementById("tooutput").checked = false;
+  // Do NOT clear popped_elements here!
 }
 function draw_box() {
   clearCanvas();
@@ -120,6 +121,7 @@ function generate() {
     "<span style='font-weight:bold;'>Output:</span>";
 }
 $("#type_tooutput_button").on("click", function () {
+  //console.log("[type_tooutput_button] Clicked. Input:", outputValue);
   var outputValue = document.getElementById("typetooutput").value.trim();
   if (outputValue === "") {
     document.getElementById("wrong").innerText =
@@ -133,6 +135,10 @@ $("#type_tooutput_button").on("click", function () {
     return;
   }
   postfix_artefact.values2.push(outputValue);
+  /*console.log(
+    "[type_tooutput_button] Output array after push:",
+    postfix_artefact.values2
+  );*/
   document.getElementById("output").innerHTML =
     "<span style='font-weight:bold;'>Output:</span> " +
     postfix_artefact.values2.join(" ");
@@ -140,35 +146,69 @@ $("#type_tooutput_button").on("click", function () {
   clear();
 });
 $("#pop_button").on("click", function () {
+  /*console.log(
+    "[pop_button] Clicked. Stack before pop:",
+    postfix_artefact.values1
+  );*/
   postfix_artefact.popped_elements = [];
   var poppedValue = postfix_artefact.values1.pop();
+  //console.log("[pop_button] Popped value:", poppedValue);
   if (poppedValue !== undefined) {
+    /* console.log("[pop_button] Pushed to popped_elements:", poppedValue);
+    console.log("[pop_button] Stack after pop:", postfix_artefact.values1);
+    console.log(
+      "[pop_button] Popped elements:",
+      postfix_artefact.popped_elements
+    ); */
     postfix_artefact.popped_elements.push(poppedValue);
   }
   document.getElementById("toignore").checked = false;
   document.getElementById("tooutput").checked = false;
   writeNumbers();
-  clear();
+  // Do NOT clear here! Let popped_elements persist until To Output/To Ignore.
+  /*console.log(
+    "[pop_button] END: popped_elements =",
+    postfix_artefact.popped_elements
+  );*/
 });
 $("#tooutput").on("click", function () {
+  /* console.log(
+    "[tooutput] START: popped_elements =",
+    postfix_artefact.popped_elements
+  );
+  console.log(
+    "[tooutput] Clicked. Popped elements:",
+    postfix_artefact.popped_elements
+  ); */
   if (postfix_artefact.popped_elements.length > 0) {
     var elementToAdd = postfix_artefact.popped_elements[0];
     if (elementToAdd !== undefined && elementToAdd !== "") {
+      /*console.log("[tooutput] Adding to output:", elementToAdd);*/
       postfix_artefact.values2.push(elementToAdd);
+      /*console.log(
+        "[tooutput] Output array after push:",
+        postfix_artefact.values2
+      );*/
+      /*console.log("[tooutput] Cleared popped_elements.");*/
       document.getElementById("output").innerHTML =
         "<span style='font-weight:bold;'>Output:</span> " +
         postfix_artefact.values2.join(" ");
     }
     postfix_artefact.popped_elements = [];
     writeNumbers();
-    document.getElementById("toignore").checked = false;
     clear();
   }
 });
 $("#toignore").on("click", function () {
+  /*console.log("[toignore] Clicked. Clearing popped_elements.");
+  console.log(
+    "[toignore] Stack:",
+    postfix_artefact.values1,
+    "Output:",
+    postfix_artefact.values2
+  ); */
   postfix_artefact.popped_elements = [];
   writeNumbers();
-  document.getElementById("tooutput").checked = false;
   clear();
 });
 $("#restart_button").on("click", function () {
