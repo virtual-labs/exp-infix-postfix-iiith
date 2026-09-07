@@ -1,0 +1,158 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "1. When evaluating a postfix expression, what data structure is commonly used to store intermediate results?",
+      "answers": {
+        "a": "Queue",
+        "b": "Stack",
+        "c": "Linked list only",
+        "d": "Binary tree"
+      },
+      "correctAnswer": "b",
+      "explanations": {
+        "a": "Incorrect. A queue follows FIFO behavior, which is not the access pattern required for postfix evaluation.",
+        "b": "Correct. A stack stores operands and intermediate results so that the operands needed by the next operator are available at the top.",
+        "c": "Incorrect. A linked list can implement a stack, but the required abstract data structure is a stack.",
+        "d": "Incorrect. A binary tree is not the standard structure used for direct postfix evaluation."
+      },
+      "difficulty": "beginner"
+    },
+    {
+      "question": "2. When a numeric operand is encountered while evaluating a postfix expression, what is normally done?",
+      "answers": {
+        "a": "Push it onto the evaluation stack",
+        "b": "Pop two values from the stack",
+        "c": "Discard it",
+        "d": "Apply the next operator immediately"
+      },
+      "correctAnswer": "a",
+      "explanations": {
+        "a": "Correct. Each operand is pushed onto the evaluation stack until an operator requires values for computation.",
+        "b": "Incorrect. Two values are popped when an operator is encountered and requires two operands.",
+        "c": "Incorrect. Operands are needed for later operations and therefore cannot simply be discarded.",
+        "d": "Incorrect. An operator is processed only when it is actually encountered in the postfix sequence."
+      },
+      "difficulty": "beginner"
+    },
+    {
+      "question": "3. When a binary operator is encountered during postfix evaluation, what is the first major action?",
+      "answers": {
+        "a": "Push the operator onto the stack as an operand",
+        "b": "Pop the required operands from the stack",
+        "c": "Restart the evaluation",
+        "d": "Ignore the operator"
+      },
+      "correctAnswer": "b",
+      "explanations": {
+        "a": "Incorrect. A binary operator is used to combine operands; it is not treated as an operand value.",
+        "b": "Correct. The operands needed by the binary operator are popped from the evaluation stack before the operation is performed.",
+        "c": "Incorrect. Encountering an operator advances the evaluation rather than restarting it.",
+        "d": "Incorrect. Ignoring an operator would leave the expression unevaluated."
+      },
+      "difficulty": "beginner"
+    },
+    {
+      "question": "4. What is the postfix evaluation result of $1\\ 2\\ +\\ 3\\ 9\\ -\\ +\\ 4\\ +$?",
+      "answers": {
+        "a": "3",
+        "b": "2",
+        "c": "1",
+        "d": "4"
+      },
+      "correctAnswer": "c",
+      "explanations": {
+        "a": "Incorrect. This value is the intermediate result of $1+2$, not the final result of the entire postfix expression.",
+        "b": "Incorrect. This value does not account for all operators and operands in the expression.",
+        "c": "Correct. Evaluating left to right gives $1+2=3$, then $3-9=-6$, then $3+(-6)=-3$, and finally $-3+4=1$.",
+        "d": "Incorrect. This value corresponds to an operand but not the final evaluated result."
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "5. Why does operand order matter when evaluating a non-commutative operator such as subtraction?",
+      "answers": {
+        "a": "Because the first popped value is the right operand and the second popped value is the left operand.",
+        "b": "Because subtraction can always be performed in either order.",
+        "c": "Because postfix expressions do not contain subtraction.",
+        "d": "Because both operands are discarded before subtraction."
+      },
+      "correctAnswer": "a",
+      "explanations": {
+        "a": "Correct. With a stack, the first value popped is the right operand and the second value popped is the left operand, so the operation must be formed accordingly.",
+        "b": "Incorrect. Reversing the operands of subtraction generally changes the result.",
+        "c": "Incorrect. Postfix expressions can contain subtraction operators.",
+        "d": "Incorrect. The two operands are used to compute the subtraction result rather than simply being discarded."
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "6. What is the postfix evaluation of $5\\ 2\\ -\\ 3\\ *$?",
+      "answers": {
+        "a": "1",
+        "b": "6",
+        "c": "9",
+        "d": "-9"
+      },
+      "correctAnswer": "c",
+      "explanations": {
+        "a": "Incorrect. This value does not match the result obtained after applying the subtraction and multiplication in postfix order.",
+        "b": "Incorrect. This value is not produced by first evaluating the subtraction and then the multiplication.",
+        "c": "Correct. First compute $5-2=3$, then multiply by $3$, giving $3*3=9$.",
+        "d": "Incorrect. The expression does not produce a negative result when its operators are applied in postfix order."
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "7. Which postfix expression corresponds to the infix expression $(a+b)*c$?",
+      "answers": {
+        "a": "ab+c*",
+        "b": "abc+*",
+        "c": "a+bc*",
+        "d": "*+abc"
+      },
+      "correctAnswer": "a",
+      "explanations": {
+        "a": "Correct. $a+b$ becomes $ab+$, and multiplying that result by $c$ gives $ab+c*$.",
+        "b": "Incorrect. This places the addition operator after $b$ and $c$ rather than immediately after $a$ and $b$.",
+        "c": "Incorrect. This sequence retains an infix-style placement of the plus operator.",
+        "d": "Incorrect. The operators are placed before their operands, which is not postfix notation."
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "8. For postfix expression $8\\ 2\\ /\\ 3\\ +$, what value remains on the evaluation stack at the end?",
+      "answers": {
+        "a": "7",
+        "b": "4",
+        "c": "5",
+        "d": "6"
+      },
+      "correctAnswer": "a",
+      "explanations": {
+        "a": "Correct. The division gives $8/2=4$, and then addition gives $4+3=7$, leaving $7$ as the final result.",
+        "b": "Incorrect. This value is the intermediate result of the division, not the final result.",
+        "c": "Incorrect. This value does not result from applying both operators in the given order.",
+        "d": "Incorrect. This value does not match the final stack result after both operations."
+      },
+      "difficulty": "advanced"
+    },
+    {
+      "question": "9. What is the time complexity of evaluating a postfix expression containing $n$ tokens when each token is processed a constant number of times?",
+      "answers": {
+        "a": "$O(n^2)$",
+        "b": "$O(\\log n)$",
+        "c": "$O(1)$",
+        "d": "$O(n)$"
+      },
+      "correctAnswer": "d",
+      "explanations": {
+        "a": "Incorrect. The standard stack-based evaluation does not perform a quadratic amount of work per input token.",
+        "b": "Incorrect. Processing the expression requires examining all $n$ tokens, not only a logarithmic number of them.",
+        "c": "Incorrect. The work grows with the number of tokens in the postfix expression.",
+        "d": "Correct. Each token is scanned and processed a constant number of times, giving $O(n)$ time complexity."
+      },
+      "difficulty": "advanced"
+    }
+  ]
+}

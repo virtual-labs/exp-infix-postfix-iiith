@@ -1,44 +1,158 @@
 {
-    "version": 2.0,
-    "questions": [
-        {
-            "question": "1. A postfix expression is also called ______.",
-            "answers": {
-                "a": "RPN",
-                "b": "PN",
-                "c": "DNP",
-                "d": "GNP"
-            },
-            "correctAnswer": "a",
-            "explanations": {
-                "a": "Reverse Polish Notation, also Post Polish Notation is another name for Postfix Expressions.",
-                "b": "Polish notation is simply the opposite of PostFix, as PostPolish is Post fix."
-            },
-            "difficulty": "intermediate"
-        },
-        {
-            "question": "2. Expression in which the Operator is written after Operand is called as _______.",
-            "answers": {
-                "a": "Infix Expression",
-                "b": "Postfix Expression",
-                "c": "Prefix Expression",
-                "d": "None of these"
-            },
-            "correctAnswer": "b",
-            "explanations": {},
-            "difficulty": "beginner"
-        },
-        {
-            "question": "3. Which of the following is an Infix Expression?",
-            "answers": {
-                "a": "b * c + d / e",
-                "b": "b*cde/+",
-                "c": "+ + A * B C D",
-                "d": "ABD*C++"
-            },
-            "correctAnswer": "a",
-            "explanations": {},
-            "difficulty": "beginner"
-        }
-    ]
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "1. A postfix expression is also called ______.",
+      "answers": {
+        "a": "RPN",
+        "b": "PN",
+        "c": "DNP",
+        "d": "GNP"
+      },
+      "correctAnswer": "a",
+      "explanations": {
+        "a": "Correct. RPN stands for Reverse Polish Notation, which is another name for postfix notation.",
+        "b": "Incorrect. PN commonly refers to Polish notation, which uses prefix form.",
+        "c": "Incorrect. DNP is not a standard name for postfix notation.",
+        "d": "Incorrect. GNP is not a standard notation name for postfix expressions."
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "2. An expression in which the operator is written after its operands is called a ______ expression.",
+      "answers": {
+        "a": "Infix",
+        "b": "Postfix",
+        "c": "Prefix",
+        "d": "None of these"
+      },
+      "correctAnswer": "b",
+      "explanations": {
+        "a": "Incorrect. Infix notation places an operator between its operands.",
+        "b": "Correct. Postfix notation places each operator after its required operands.",
+        "c": "Incorrect. Prefix notation places an operator before its operands.",
+        "d": "Incorrect. One of the listed notations directly describes this operator placement."
+      },
+      "difficulty": "beginner"
+    },
+    {
+      "question": "3. Which of the following is an infix expression?",
+      "answers": {
+        "a": "b * c + d / e",
+        "b": "b*cde/+",
+        "c": "+ + A * B C D",
+        "d": "ABD*C++"
+      },
+      "correctAnswer": "a",
+      "explanations": {
+        "a": "Correct. The operators are written between their operands, so this is an infix expression.",
+        "b": "Incorrect. The operators are not consistently placed between their operands in this sequence.",
+        "c": "Incorrect. The operators appear before their operands in prefix-style positions.",
+        "d": "Incorrect. The operators appear after operands, which is characteristic of postfix notation."
+      },
+      "difficulty": "beginner"
+    },
+    {
+      "question": "4. Which of the following is a valid prefix expression for the infix expression $a+b*c$?",
+      "answers": {
+        "a": "+ a * b c",
+        "b": "a b + c *",
+        "c": "a b c * +",
+        "d": "a + b * c"
+      },
+      "correctAnswer": "a",
+      "explanations": {
+        "a": "Correct. The prefix form places $+$ before the two terms and places $*$ before $b$ and $c$.",
+        "b": "Incorrect. This sequence does not place each operator before its operands in a valid prefix structure.",
+        "c": "Incorrect. This is the postfix form of the expression rather than its prefix form.",
+        "d": "Incorrect. This is the original infix arrangement."
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "5. Which of the following is a valid postfix expression for the infix expression $a+b*c$?",
+      "answers": {
+        "a": "ab+c*",
+        "b": "abc*+",
+        "c": "a+bc*",
+        "d": "*+abc"
+      },
+      "correctAnswer": "b",
+      "explanations": {
+        "a": "Incorrect. This postfix sequence performs addition before multiplication, which does not preserve the grouping of $b*c$.",
+        "b": "Correct. $b*c$ becomes $bc*$ first, and then addition with $a$ gives $abc*+$.",
+        "c": "Incorrect. The plus operator appears before all of its operands in this sequence.",
+        "d": "Incorrect. This sequence does not place the operators after the operands they operate on."
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "6. Which statement correctly distinguishes infix, prefix, and postfix notation?",
+      "answers": {
+        "a": "Infix places operators between operands, prefix places operators before operands, and postfix places operators after operands.",
+        "b": "All three notations place operators in the same position.",
+        "c": "Prefix and postfix are identical to infix notation.",
+        "d": "Postfix requires every operator to appear before its operands."
+      },
+      "correctAnswer": "a",
+      "explanations": {
+        "a": "Correct. The three notations differ primarily in the position of each operator relative to its operands.",
+        "b": "Incorrect. The operator position is precisely what distinguishes these notations.",
+        "c": "Incorrect. Prefix and postfix use operator positions different from infix notation.",
+        "d": "Incorrect. Postfix places operators after their operands, not before them."
+      },
+      "difficulty": "beginner"
+    },
+    {
+      "question": "7. For the expression $a+b*c$, which operator has higher precedence?",
+      "answers": {
+        "a": "$+$",
+        "b": "$*$",
+        "c": "Both have equal precedence",
+        "d": "Neither operator has precedence"
+      },
+      "correctAnswer": "b",
+      "explanations": {
+        "a": "Incorrect. Addition has lower precedence than multiplication in the standard arithmetic precedence used by this experiment.",
+        "b": "Correct. Multiplication has higher precedence than addition, so $b*c$ is grouped before the addition.",
+        "c": "Incorrect. The two operators do not have equal precedence under the standard arithmetic rules used here.",
+        "d": "Incorrect. Operators such as addition and multiplication have defined precedence levels."
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "8. Why are parentheses important in an infix expression such as $(a+b)*c$?",
+      "answers": {
+        "a": "They specify a grouping that can override the usual operator precedence.",
+        "b": "They always indicate that the expression is postfix.",
+        "c": "They remove the need for operands.",
+        "d": "They convert every operator into a unary operator."
+      },
+      "correctAnswer": "a",
+      "explanations": {
+        "a": "Correct. Parentheses explicitly group $a+b$, so that grouped result is used before multiplication by $c$.",
+        "b": "Incorrect. Parentheses are used in infix notation and do not by themselves make an expression postfix.",
+        "c": "Incorrect. Parentheses do not eliminate the operands inside the grouped expression.",
+        "d": "Incorrect. Parentheses affect grouping but do not change an operator's number of operands."
+      },
+      "difficulty": "advanced"
+    },
+    {
+      "question": "9. Which of the following is a valid postfix expression for $(a+b)*c-d$?",
+      "answers": {
+        "a": "ab+c*d-",
+        "b": "abc+*d-",
+        "c": "ab+c-d*",
+        "d": "a+b*c-d"
+      },
+      "correctAnswer": "a",
+      "explanations": {
+        "a": "Correct. First $a+b$ becomes $ab+$, then multiplication by $c$ gives $ab+c*$, and subtraction of $d$ gives $ab+c*d-$.",
+        "b": "Incorrect. This sequence does not place the addition operator immediately after the operands in the grouped expression.",
+        "c": "Incorrect. This sequence performs subtraction before the multiplication represented by the original expression.",
+        "d": "Incorrect. This retains infix operator placement rather than using postfix notation."
+      },
+      "difficulty": "advanced"
+    }
+  ]
 }

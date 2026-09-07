@@ -1,65 +1,158 @@
 {
-    "version": 2.0,
-    "questions": [
-        {
-            "question": "1. Why is there a need to convert from infix to postfix and then evaluate, instead of directly evaluating infix?",
-            "answers": {
-                "a": "It is easier to read for humans",
-                "b": "It is easier to It is easier to <a href =\"https://en.wikipedia.org/wiki/Parsing\">parse</a> (be read by computer).",
-                "c": "Both a and b",
-                "d": "None of these."
-            },
-            "correctAnswer": "b",
-            "explanations": {},
-            "difficulty": "beginner"
-        },
-        {
-            "question": "2. Postfix evaluation of 1 2 + 3 9 - + 4 + is _______.",
-            "answers": {
-                "a": "3",
-                "b": "2",
-                "c": "1",
-                "d": "4"
-            },
-            "correctAnswer": "c",
-            "explanations": {},
-            "difficulty": "beginner"
-        },
-        {
-            "question": "3. Convert the expression from infix to postfix 1 + 1 - 3 * 4 / 2 + 3 - 8?",
-            "answers": {
-                "a": "1 1 + 3 - 4 * 2 / + 3 8 -",
-                "b": "1 1 + 3 - 4 / 2 * 3 + 8 -",
-                "c": "1 1 + 3 4 * 2 / - 3 + 8 -",
-                "d": "1 1 * 3 + 4 - 2 + 3 / 8 -"
-            },
-            "correctAnswer": "c",
-            "explanations": {},
-            "difficulty": "beginner"
-        },
-        {
-            "question": "4. Convert the expression from Infix to Postfix a + b * (c ^ d - e) ^ (f + g * h) - i?",
-            "answers": {
-                "a": "ab^cd-ef+d*h^*-i+",
-                "b": "ab^cd-ef+d*h*^-i+",
-                "c": "abcd^e-fgh*+^*+i-",
-                "d": "abcd^e-fgh*+*^+i-"
-            },
-            "correctAnswer": "c",
-            "explanations": {},
-            "difficulty": "intermediate"
-        },
-        {
-            "question": "5. Convert the expression from Infix to Postfix a + b * c - d ^ e ^ f?",
-            "answers": {
-                "a": "abc * + def ^^-",
-                "b": "abc * + de ^ f ^-\\",
-                "c": "ab + c *d - e ^ f ^",
-                "d": "-+ a * bc ^^ def"
-            },
-            "correctAnswer": "a",
-            "explanations": {},
-            "difficulty": "beginner"
-        }
-    ]
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "1. Why is it useful to convert an infix expression to postfix before evaluation?",
+      "answers": {
+        "a": "It makes the expression easier for humans to read.",
+        "b": "It makes the evaluation order explicit, so evaluation does not need to repeatedly apply infix precedence and parentheses.",
+        "c": "It changes every operand into an operator.",
+        "d": "It guarantees that no stack is needed during evaluation."
+      },
+      "correctAnswer": "b",
+      "explanations": {
+        "a": "Incorrect. Postfix notation is primarily useful for unambiguous machine-oriented evaluation rather than improved human readability.",
+        "b": "Correct. In postfix notation, operators follow their operands, so the evaluation order is explicit and parentheses are not required.",
+        "c": "Incorrect. Conversion does not change operands into operators.",
+        "d": "Incorrect. A stack is commonly used to evaluate postfix expressions."
+      },
+      "difficulty": "beginner"
+    },
+    {
+      "question": "2. The postfix evaluation of $1\\ 2\\ +\\ 3\\ 9\\ -\\ +\\ 4\\ +$ is ______.",
+      "answers": {
+        "a": "3",
+        "b": "2",
+        "c": "1",
+        "d": "4"
+      },
+      "correctAnswer": "c",
+      "explanations": {
+        "a": "Incorrect. This is the intermediate result of the first addition, not the final result.",
+        "b": "Incorrect. This value does not account for the complete postfix expression.",
+        "c": "Correct. The operations produce $1+2=3$, $3-9=-6$, $3+(-6)=-3$, and $-3+4=1$.",
+        "d": "Incorrect. This is an operand in the expression, not the final evaluated result."
+      },
+      "difficulty": "beginner"
+    },
+    {
+      "question": "3. Convert the infix expression $1+1-3*4/2+3-8$ to postfix.",
+      "answers": {
+        "a": "1 1 + 3 - 4 * 2 / + 3 8 -",
+        "b": "1 1 + 3 - 4 / 2 * 3 + 8 -",
+        "c": "1 1 + 3 4 * 2 / - 3 + 8 -",
+        "d": "1 1 * 3 + 4 - 2 + 3 / 8 -"
+      },
+      "correctAnswer": "c",
+      "explanations": {
+        "a": "Incorrect. This places the subtraction before the multiplication and division that follow it.",
+        "b": "Incorrect. This reverses the required order of multiplication and division.",
+        "c": "Correct. Addition and subtraction are left-associative, while multiplication and division take precedence, giving $1\\ 1\\ +\\ 3\\ 4\\ *\\ 2\\ /\\ -\\ 3\\ +\\ 8\\ -$.",
+        "d": "Incorrect. The operators are not placed after the correct operand groups for the given infix expression."
+      },
+      "difficulty": "beginner"
+    },
+    {
+      "question": "4. Convert the infix expression $a+b*(c^d-e)^(f+g*h)-i$ to postfix.",
+      "answers": {
+        "a": "$\\texttt{ab\\textasciicircum{}cd-ef+d*h\\textasciicircum{}*-i+}$",
+        "b": "$\\texttt{ab\\textasciicircum{}cd-ef+d*h*\\textasciicircum{}-i+}$",
+        "c": "$\\texttt{abcd\\textasciicircum{}e-fgh*+\\textasciicircum{}*+i-}$",
+        "d": "$\\texttt{abcd\\textasciicircum{}e-fgh*+*\\textasciicircum{}+i-}$"
+      },
+      "correctAnswer": "c",
+      "explanations": {
+        "a": "Incorrect. This sequence does not correctly preserve the operand order and grouping of the exponentiation terms.",
+        "b": "Incorrect. This sequence contains an incorrect ordering of the exponentiation and multiplication operators.",
+        "c": "Correct. The postfix form is $\\texttt{abcd\\textasciicircum{}e-fgh*+\\textasciicircum{}*+i-}$, preserving the grouped subexpressions, exponentiation, multiplication, addition, and final subtraction.",
+        "d": "Incorrect. This sequence changes the order of the multiplication and exponentiation operations within the grouped expression."
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "5. Convert the infix expression $a+b*c-d^{e^f}$ to postfix.",
+      "answers": {
+        "a": "$\\texttt{abc*+def\\textasciicircum{}\\textasciicircum{}-}$",
+        "b": "$\\texttt{abc*+de\\textasciicircum{}f\\textasciicircum{}-}$",
+        "c": "$\\texttt{ab+c*d-e\\textasciicircum{}f\\textasciicircum{}}$",
+        "d": "$\\texttt{-+a*bc\\textasciicircum{}\\textasciicircum{}def}$"
+      },
+      "correctAnswer": "a",
+      "explanations": {
+        "a": "Correct. Multiplication is performed before addition, and the exponentiation is right-associative, so $d^{e^f}$ becomes $\\texttt{def\\textasciicircum{}\\textasciicircum{}}$ in postfix notation.",
+        "b": "Incorrect. This sequence does not correctly represent the right-associative grouping of the exponentiation operators.",
+        "c": "Incorrect. This sequence does not preserve the required operator precedence and postfix ordering.",
+        "d": "Incorrect. This sequence places operators before their operands and therefore does not represent the required postfix form."
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "6. During postfix evaluation, what happens when the operator $*$ is encountered after two operands have been pushed onto the stack?",
+      "answers": {
+        "a": "The operator is pushed as a new operand.",
+        "b": "The two operands are used for multiplication and the result is pushed back onto the stack.",
+        "c": "The stack is cleared without performing the operation.",
+        "d": "The operator is ignored."
+      },
+      "correctAnswer": "b",
+      "explanations": {
+        "a": "Incorrect. The multiplication operator is not treated as an operand value.",
+        "b": "Correct. The required operands are popped, multiplied, and the resulting value is pushed back onto the evaluation stack.",
+        "c": "Incorrect. Clearing the stack would discard values needed for the expression's result.",
+        "d": "Incorrect. Ignoring the operator would leave the postfix expression unevaluated."
+      },
+      "difficulty": "beginner"
+    },
+    {
+      "question": "7. Which postfix expression is equivalent to the infix expression $a*(b+c)-d$?",
+      "answers": {
+        "a": "abc+*d-",
+        "b": "ab+c*d-",
+        "c": "abc*+d-",
+        "d": "a*bc+d-"
+      },
+      "correctAnswer": "a",
+      "explanations": {
+        "a": "Correct. The grouped sum becomes $bc+$, multiplication by $a$ gives $abc+*$, and subtraction of $d$ gives $abc+*d-$.",
+        "b": "Incorrect. This sequence performs addition with a different operand grouping than the original expression.",
+        "c": "Incorrect. This sequence does not place multiplication after the complete operand group $b+c$.",
+        "d": "Incorrect. This retains infix-style operator placement."
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "8. In the postfix expression $2\\ 3\\ 4\\ *\\ +$, what is the final result?",
+      "answers": {
+        "a": "14",
+        "b": "20",
+        "c": "9",
+        "d": "24"
+      },
+      "correctAnswer": "a",
+      "explanations": {
+        "a": "Correct. First compute $3*4=12$, then add $2$, giving $14$.",
+        "b": "Incorrect. This value does not result from applying the multiplication before the addition.",
+        "c": "Incorrect. This value is not the final result of the complete postfix expression.",
+        "d": "Incorrect. This would not result from the two operations in the given postfix order."
+      },
+      "difficulty": "advanced"
+    },
+    {
+      "question": "9. For a valid postfix expression containing $n$ tokens, what is the auxiliary space complexity of stack-based evaluation in the worst case?",
+      "answers": {
+        "a": "$O(1)$",
+        "b": "$O(\\log n)$",
+        "c": "$O(n)$",
+        "d": "$O(n^2)$"
+      },
+      "correctAnswer": "c",
+      "explanations": {
+        "a": "Incorrect. The evaluation stack may need to hold a number of intermediate operands that grows with the expression size.",
+        "b": "Incorrect. The maximum stack size is not generally bounded by a logarithmic function of the number of tokens.",
+        "c": "Correct. In the worst case, the evaluation stack can contain a linear number of operands, so the auxiliary space complexity is $O(n)$.",
+        "d": "Incorrect. The standard postfix evaluation stack does not require quadratic auxiliary space."
+      },
+      "difficulty": "advanced"
+    }
+  ]
 }
