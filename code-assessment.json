@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "experiment name": "Infix to Postfix Conversion Implementation",
+  "problems": [
+    {
+      "problem name": "Infix to Postfix Conversion (Recursive)",
+      "description": "Implement a recursive function to convert infix expressions to postfix notation without using stacks. Parse the expression by finding the lowest precedence operator from right to left (+ before *), recursively convert left and right sub-expressions, then combine as leftPostfix + rightPostfix + operator. Handle operator precedence where * has higher precedence than +. Example: '2+3*4' should become '234*+' (3*4 first, then 2+ result). Only JavaScript is allowed.",
+      "inputs": ["2+3*4"],
+      "expected": "234*+",
+      "inputs description": "A string representing an infix expression with single-digit numbers and the operators + and *.",
+      "expected description": "A string representing the postfix conversion of the given infix expression.",
+      "difficulty": "beginner"
+    },
+    {
+      "problem name": "Infix to Postfix",
+      "description": "Implement the Shunting Yard algorithm using a stack to convert infix expressions to postfix notation. Scan the infix expression left to right: add operands directly to output, push operators to stack based on precedence rules (pop operators with higher/equal precedence first), and handle parentheses by pushing '(' and popping until ')'. Finally, pop all remaining operators to output. Example: 'A+B*C+D' should become 'ABC*+D+'. Only JavaScript is allowed.",
+      "inputs": ["A+B*C+D"],
+      "expected": "ABC*+D+",
+      "inputs description": "Input consists of an infix sequence of variables and operations.",
+      "expected description": "The correct postfix conversion of the given input infix expression.",
+      "difficulty": "intermediate"
+    },
+    {
+      "problem name": "Evaluate Postfix Expression",
+      "description": "Implement a stack-based evaluator for postfix expressions with multi-digit numbers. Process tokens left to right: push operands (numbers) onto the stack, and when encountering an operator, pop two operands, perform the operation (second popped operand first), then push the result back. The final result is the only remaining stack element. Example: ['12', '3', '/', '5', '2', '*', '+'] evaluates as 12/3 + 5*2 = 4 + 10 = 14. Only JavaScript is allowed.",
+      "inputs": [["12", "3", "/", "5", "2", "*", "+"]],
+      "expected": 14,
+      "inputs description": "An array of strings representing a postfix expression, where each string is either a multi-digit number or one of the operators +, -, *, /.",
+      "expected description": "An integer representing the evaluated result of the postfix expression.",
+      "difficulty": "intermediate"
+    }
+  ]
+}
