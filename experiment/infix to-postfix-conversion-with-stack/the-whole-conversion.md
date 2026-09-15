@@ -1,11 +1,13 @@
 ### Algorithm for the Whole Conversion
 
+Use the following steps to convert an infix expression to postfix form:
+
 1. Scan the infix expression from left to right.
-2. If the scanned character is an operand, output it.
-3. Else:
-3.1 If the precedence of the scanned operator is greater than the precedence of the operator in the stack (or the stack is empty or the stack contains a ‘(‘ ), push it. 
-3.2 Else, Pop all the operators from the stack which are greater than or equal to in precedence than that of the scanned operator. After doing that Push the scanned operator to the stack. (If you encounter parenthesis while popping then stop there and push the scanned operator in the stack.)
-4. If the scanned character is an ‘(‘, push it to the stack.
-5. If the scanned character a is n ‘)’, pop the stack and and output it until a ‘(‘ is encountered, and discard both the parenthesis.
-6. Repeat steps 2-6 until infix expression is scanned.
-7. Pop and output from the stack until it is empty.
+2. If the scanned symbol is an operand, add it directly to the output.
+3. If the scanned symbol is `(`, push it onto the stack.
+4. If the scanned symbol is an operator:
+   - If the stack is empty, or the top of the stack is `(`, or the scanned operator has higher precedence than the operator on the top of the stack, push the scanned operator onto the stack.
+   - Otherwise, pop operators from the stack and add them to the output until you find an operator with lower precedence or a `(`. Then push the scanned operator onto the stack.
+5. If the scanned symbol is `)`, pop operators from the stack and add them to the output until `(` is found. Remove the `(` as well.
+6. Repeat steps 1 to 5 until the entire infix expression has been scanned.
+7. Pop any remaining operators from the stack and add them to the output.

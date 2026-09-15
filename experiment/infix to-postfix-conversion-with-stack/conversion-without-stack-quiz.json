@@ -1,17 +1,158 @@
 {
-    "version": 2.0,
-    "questions": [
-        {
-            "question": "1. What is the priority order of operators i.e. the order of precedence of operators",
-            "answers": {
-                "a": "Priority(^) > Priority(/) > Priority(*) > Priority(+) >= Priority(-)",
-                "b": "Priority(/) > Priority(^) > Priority(*) > Priority(+) >= Priority(-)",
-                "c": "Priority(^) > Priority(*) > Priority(/) > Priority(+) >= Priority(-)",
-                "d": "Priority(/) > Priority(*) > Priority(^) > Priority(+) >= Priority(-)"
-            },
-            "correctAnswer": "a",
-            "explanations": {},
-            "difficulty": "intermediate"
-        }
-    ]
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "1. What is the correct precedence order for the operators used in this experiment?",
+      "answers": {
+        "a": "$\\text{Priority}(\\wedge) > \\text{Priority}(/) > \\text{Priority}(*) > \\text{Priority}(+) \\ge \\text{Priority}(-)$",
+        "b": "$\\text{Priority}(/) > \\text{Priority}(\\wedge) > \\text{Priority}(*) > \\text{Priority}(+) \\ge \\text{Priority}(-)$",
+        "c": "$\\text{Priority}(\\wedge) > \\text{Priority}(*) > \\text{Priority}(/) > \\text{Priority}(+) \\ge \\text{Priority}(-)$",
+        "d": "$\\text{Priority}(/) > \\text{Priority}(*) > \\text{Priority}(\\wedge) > \\text{Priority}(+) \\ge \\text{Priority}(-)$"
+      },
+      "correctAnswer": "a",
+      "explanations": {
+        "a": "Correct. Exponentiation has higher precedence than multiplication and division, which have higher precedence than addition and subtraction.",
+        "b": "Incorrect. This places division above exponentiation, which does not match the precedence used for these operators.",
+        "c": "Incorrect. This reverses the relative precedence of multiplication and division.",
+        "d": "Incorrect. This places exponentiation below multiplication and division."
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "2. During infix-to-postfix conversion using a stack, where are pending operators temporarily stored?",
+      "answers": {
+        "a": "In the output expression",
+        "b": "In the operand list",
+        "c": "In the operator stack",
+        "d": "In the input expression permanently"
+      },
+      "correctAnswer": "c",
+      "explanations": {
+        "a": "Incorrect. Operators are not necessarily written to the output immediately when they are encountered.",
+        "b": "Incorrect. Operands and pending operators have different roles during the conversion.",
+        "c": "Correct. The operator stack temporarily stores operators until precedence and parentheses allow them to be moved to the output.",
+        "d": "Incorrect. The input is processed as the source expression and is not the temporary operator storage."
+      },
+      "difficulty": "beginner"
+    },
+    {
+      "question": "3. When an operand is encountered while converting an infix expression to postfix, what is normally done with it?",
+      "answers": {
+        "a": "Push it onto the operator stack",
+        "b": "Append it directly to the postfix output",
+        "c": "Discard it until all operators are processed",
+        "d": "Replace it with the previous operator"
+      },
+      "correctAnswer": "b",
+      "explanations": {
+        "a": "Incorrect. The stack in this conversion procedure is used primarily for pending operators and parentheses.",
+        "b": "Correct. An operand can be appended directly to the postfix output because its position does not depend on operator precedence.",
+        "c": "Incorrect. Operands are essential parts of the resulting postfix expression and cannot be discarded.",
+        "d": "Incorrect. An operand retains its identity and is not replaced by an operator."
+      },
+      "difficulty": "beginner"
+    },
+    {
+      "question": "4. When an operator is read, why may operators already on the stack be popped before the new operator is pushed?",
+      "answers": {
+        "a": "To preserve operator precedence and associativity in the postfix output",
+        "b": "To remove all operands from the expression",
+        "c": "To make the stack contain only operands",
+        "d": "To reverse the input expression"
+      },
+      "correctAnswer": "a",
+      "explanations": {
+        "a": "Correct. Popping applicable higher- or equal-precedence operators preserves the required evaluation order before the new operator is pushed.",
+        "b": "Incorrect. Operand removal is not the purpose of popping operators during conversion.",
+        "c": "Incorrect. The operator stack is intended to hold pending operators and parentheses, not to be converted into an operand-only structure.",
+        "d": "Incorrect. Popping operators does not reverse the input expression."
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "5. What is done when a left parenthesis $($ is encountered during stack-based conversion?",
+      "answers": {
+        "a": "It is appended immediately to the postfix output.",
+        "b": "It is ignored completely.",
+        "c": "It is placed on the operator stack.",
+        "d": "It causes every operand to be popped."
+      },
+      "correctAnswer": "c",
+      "explanations": {
+        "a": "Incorrect. Parentheses are control symbols for grouping and are not included in the final postfix expression.",
+        "b": "Incorrect. The left parenthesis must be remembered so that the corresponding grouping can be handled correctly.",
+        "c": "Correct. A left parenthesis is pushed onto the stack to mark the beginning of a grouped subexpression.",
+        "d": "Incorrect. Encountering a left parenthesis does not require all operands to be removed."
+      },
+      "difficulty": "beginner"
+    },
+    {
+      "question": "6. What is the role of a right parenthesis $)$ during infix-to-postfix conversion?",
+      "answers": {
+        "a": "Push it onto the stack and leave it there.",
+        "b": "Pop operators to the output until the matching left parenthesis is found, then discard the pair of parentheses.",
+        "c": "Append the right parenthesis directly to the postfix output.",
+        "d": "Convert the right parenthesis into an operand."
+      },
+      "correctAnswer": "b",
+      "explanations": {
+        "a": "Incorrect. A right parenthesis signals the completion of a grouped expression and should not remain on the operator stack.",
+        "b": "Correct. Operators inside the group are moved to the output until the matching left parenthesis is reached; the parentheses themselves are then discarded.",
+        "c": "Incorrect. Parentheses do not appear in the final postfix expression.",
+        "d": "Incorrect. A parenthesis is a grouping symbol, not an operand."
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "7. For the infix expression $a+b*c$, what postfix expression should a correct stack-based conversion produce?",
+      "answers": {
+        "a": "ab+c*",
+        "b": "abc*+",
+        "c": "a+bc*",
+        "d": "*abc+"
+      },
+      "correctAnswer": "b",
+      "explanations": {
+        "a": "Incorrect. This postfix sequence performs addition before the multiplication represented in the infix expression.",
+        "b": "Correct. The higher-precedence multiplication becomes $bc*$ first, followed by addition with $a$, producing $abc*+$.",
+        "c": "Incorrect. The plus operator is not positioned after both operands in this sequence.",
+        "d": "Incorrect. The multiplication operator is not placed after both of its operands."
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "8. In a standard stack-based infix-to-postfix algorithm, what should happen to the remaining operators after the entire input expression has been scanned?",
+      "answers": {
+        "a": "They should be discarded.",
+        "b": "They should be converted into operands.",
+        "c": "They should be popped from the stack and appended to the postfix output, subject to valid-expression conditions.",
+        "d": "They should be pushed back into the input expression."
+      },
+      "correctAnswer": "c",
+      "explanations": {
+        "a": "Incorrect. Remaining operators may still be required to complete the postfix expression.",
+        "b": "Incorrect. Operators retain their role as operators throughout the conversion.",
+        "c": "Correct. After the input is exhausted, remaining pending operators are popped from the stack and appended to the output.",
+        "d": "Incorrect. The input expression is not rebuilt by pushing operators back into it."
+      },
+      "difficulty": "advanced"
+    },
+    {
+      "question": "9. What is the time complexity of scanning an infix expression of $n$ tokens using a standard stack-based conversion algorithm, assuming each token is pushed and popped at most a constant number of times?",
+      "answers": {
+        "a": "$O(1)$",
+        "b": "$O(\\log n)$",
+        "c": "$O(n)$",
+        "d": "$O(n^2)$"
+      },
+      "correctAnswer": "c",
+      "explanations": {
+        "a": "Incorrect. Processing all $n$ tokens requires work that grows with the input size.",
+        "b": "Incorrect. The algorithm does not reduce the number of tokens to a logarithmic amount of work.",
+        "c": "Correct. Each token is processed a constant number of times, so the overall time complexity is $O(n)$.",
+        "d": "Incorrect. The standard stack-based conversion does not require a quadratic number of token operations."
+      },
+      "difficulty": "advanced"
+    }
+  ]
 }
