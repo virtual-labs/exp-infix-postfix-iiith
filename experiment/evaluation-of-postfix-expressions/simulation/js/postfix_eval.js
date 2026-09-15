@@ -19,7 +19,7 @@ function clearCanvas() {
     0,
     0,
     postfix_artefact.canvas.width,
-    postfix_artefact.canvas.height
+    postfix_artefact.canvas.height,
   );
 }
 
@@ -49,7 +49,7 @@ function draw_expression() {
   if (postfix_artefact.expression[postfix_artefact.pointer] != null)
     sub_string3 = txt.substr(
       (2 + postfix_artefact.expression[postfix_artefact.pointer].length) *
-        postfix_artefact.pointer
+        postfix_artefact.pointer,
     );
   else sub_string3 = " ";
 }
@@ -63,7 +63,7 @@ function draw_box() {
       postfix_artefact.box_start_x,
       postfix_artefact.box_start_y - postfix_artefact.box_height * (i + 1),
       postfix_artefact.box_length,
-      postfix_artefact.box_height
+      postfix_artefact.box_height,
     );
     postfix_artefact.ctx.stroke();
     postfix_artefact.ctx.strokeStyle = "white";
@@ -71,7 +71,7 @@ function draw_box() {
       postfix_artefact.box_start_x,
       postfix_artefact.box_start_y - postfix_artefact.box_height * (i + 1),
       postfix_artefact.box_length,
-      postfix_artefact.box_height
+      postfix_artefact.box_height,
     );
     postfix_artefact.ctx.stroke();
   }
@@ -79,12 +79,12 @@ function draw_box() {
 }
 function double_pop() {
   var operand1 = parseFloat(
-    postfix_artefact.values2[postfix_artefact.values2.length - 1]
+    postfix_artefact.values2[postfix_artefact.values2.length - 1],
   );
   postfix_artefact.values2.pop();
   writeNumbers();
   var operand2 = parseFloat(
-    postfix_artefact.values2[postfix_artefact.values2.length - 1]
+    postfix_artefact.values2[postfix_artefact.values2.length - 1],
   );
   postfix_artefact.values2.pop();
   writeNumbers();
@@ -137,10 +137,6 @@ function generate() {
 }
 
 $("#push_button").on("click", function () {
-  postfix_artefact.values2.length = 0;
-  document.getElementById("output").innerHTML =
-    "<span style='font-weight:bold;'>Popped Elements:</span> " +
-    postfix_artefact.values2.join(" ");
   var value = document.getElementById("numbers").value;
   if ($.isNumeric(value)) {
     if (value != null) {
@@ -151,6 +147,9 @@ $("#push_button").on("click", function () {
     } else {
       postfix_artefact.pointer--;
     }
+    document.getElementById("output").innerHTML =
+      "<span style='font-weight:bold;'>Popped Elements:</span> " +
+      postfix_artefact.values2.join(" ");
     writeNumbers();
   } else {
     document.getElementById("numbers").value = "";
@@ -211,9 +210,8 @@ $("#add_button").on("click", function () {
   document.getElementById("output").innerHTML =
     "<span style='font-weight:bold;'>Popped Elements:</span> " + a + ", " + b;
   writeNumbers();
-  document.getElementById(
-    "correct"
-  ).innerText = `Applied + operator: ${a} + ${b} = ${result}`;
+  document.getElementById("correct").innerText =
+    `Applied + operator: ${a} + ${b} = ${result}`;
   document.getElementById("wrong").innerText = "";
 });
 
@@ -239,9 +237,8 @@ $("#subtract_button").on("click", function () {
   document.getElementById("output").innerHTML =
     "<span style='font-weight:bold;'>Popped Elements:</span> " + a + ", " + b;
   writeNumbers();
-  document.getElementById(
-    "correct"
-  ).innerText = `Applied - operator: ${a} - ${b} = ${result}`;
+  document.getElementById("correct").innerText =
+    `Applied - operator: ${a} - ${b} = ${result}`;
   document.getElementById("wrong").innerText = "";
 });
 $("#multiply_button").on("click", function () {
@@ -258,9 +255,8 @@ $("#multiply_button").on("click", function () {
   document.getElementById("output").innerHTML =
     "<span style='font-weight:bold;'>Popped Elements:</span> " + a + ", " + b;
   writeNumbers();
-  document.getElementById(
-    "correct"
-  ).innerText = `Applied * operator: ${a} * ${b} = ${result}`;
+  document.getElementById("correct").innerText =
+    `Applied * operator: ${a} * ${b} = ${result}`;
   document.getElementById("wrong").innerText = "";
 });
 $("#divide_button").on("click", function () {
@@ -284,9 +280,8 @@ $("#divide_button").on("click", function () {
   document.getElementById("output").innerHTML =
     "<span style='font-weight:bold;'>Popped Elements:</span> " + a + ", " + b;
   writeNumbers();
-  document.getElementById(
-    "correct"
-  ).innerText = `Applied / operator: ${a} / ${b} = ${result}`;
+  document.getElementById("correct").innerText =
+    `Applied / operator: ${a} / ${b} = ${result}`;
   document.getElementById("wrong").innerText = "";
 });
 $("#exponent_button").on("click", function () {
@@ -303,9 +298,8 @@ $("#exponent_button").on("click", function () {
   document.getElementById("output").innerHTML =
     "<span style='font-weight:bold;'>Popped Elements:</span> " + a + ", " + b;
   writeNumbers();
-  document.getElementById(
-    "correct"
-  ).innerText = `Applied ^ operator: ${a} ^ ${b} = ${result}`;
+  document.getElementById("correct").innerText =
+    `Applied ^ operator: ${a} ^ ${b} = ${result}`;
   document.getElementById("wrong").innerText = "";
 });
 $("#restart_button").on("click", function () {

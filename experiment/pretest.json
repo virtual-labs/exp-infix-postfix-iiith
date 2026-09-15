@@ -1,70 +1,158 @@
 {
-    "version": 2.0,
-    "questions": [
-        {
-            "question": "1. What does push operation on a stack do?",
-            "answers": {
-                "a": "Adds an element to the bottom of the stack.",
-                "b": "Adds an element to the top of the stack.",
-                "c": "Removes an element from the top of the stack.",
-                "d": "Adds an element in the middle of the stack."
-            },
-            "correctAnswer": "b",
-            "explanations": {},
-            "difficulty": "beginner"
-        },
-        {
-            "question": "2. Situation: A teacher wants to remember the names of all students in the class. Which of the following is the best possible way to use the linked list in this situation?",
-            "answers": {
-                "a": "Teacher memorizes all students' names.",
-                "b": "Teacher asks her favorite student to memorize all others names and help her whenever needed.",
-                "c": "Teacher asks each student to remember the person sitting next to him/her and the teacher will only have to remember the  first person's name.",
-                "d": "Teacher asks all students to memorize every other student's name."
-            },
-            "correctAnswer": "c",
-            "explanations": {},
-            "difficulty": "intermediate"
-        },
-        {
-            "question": "3. Situation: A teacher wants to remember the names of all students in the class. In the aforementioned question, what are the pros and cons of using a linked list faced by the teacher?",
-            "answers": {
-                "a": "It minimizes her effort.",
-                "b": "To access a student's name it will take a lot of time.",
-                "c": "Both a and b",
-                "d": "None of these"
-            },
-            "correctAnswer": "c",
-            "explanations": {},
-            "difficulty": "intermediate"
-        },
-        {
-            "question": "4. Which of the following best describes a stack?",
-            "answers": {
-                "a": "People standing at Starbucks.",
-                "b": "A family tree",
-                "c": "A football team",
-                "d": "Set of dinner plates placed on top of each other"
-            },
-            "correctAnswer": "d",
-            "explanations": {
-                "a": "People standing at starbucks would be waiting in line, the first in line would be the first to get their coffee. This is an example of a queue hence the wrong answer.",
-                "b": "A family tree keeps diverging creating branches at every generation, forming a typical example of tree data structure, and hence wrong.",
-                "c": "A football team is just a collection of players with no specific intentions in mind. Hence they would be classified into an array or a list which makes for a collection of items. And hence is the wrong answer.",
-                "d": "To add to the plates we can only put the plate on the top, and to take on the plate, we can only still take from the top. Hence this is a classic example of Last in First Out (LIFO), a Stack and is also the correct answer"
-            },
-            "difficulty": "intermediate"
-        },
-        {
-            "question": "5. On what principle are objects inserted and removed in stacks?",
-            "answers": {
-                "a": "LIFO",
-                "b": "FIFO",
-                "c": "LILO",
-                "d": "None of These"
-            },
-            "correctAnswer": "a",
-            "explanations": {},
-            "difficulty": "beginner"
-        }
-    ]
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "1. What does the push operation on a stack do?",
+      "answers": {
+        "a": "Adds an element to the bottom of the stack.",
+        "b": "Adds an element to the top of the stack.",
+        "c": "Removes an element from the top of the stack.",
+        "d": "Adds an element in the middle of the stack."
+      },
+      "correctAnswer": "b",
+      "explanations": {
+        "a": "Incorrect. Push does not place a new element at the bottom of a stack.",
+        "b": "Correct. Push inserts a new element at the top of the stack.",
+        "c": "Incorrect. Removing an element from the top is the pop operation.",
+        "d": "Incorrect. A standard stack does not insert elements into the middle."
+      },
+      "difficulty": "beginner"
+    },
+    {
+      "question": "2. Situation: A teacher wants to process the operators in an arithmetic expression while temporarily remembering operators that cannot yet be placed in the output. Which approach best represents the use of a stack?",
+      "answers": {
+        "a": "Teacher memorizes all operators without keeping any order.",
+        "b": "Teacher asks a favorite student to remember all operators and use them whenever needed.",
+        "c": "Teacher places each pending operator on top of a stack and removes the most recent applicable operator first.",
+        "d": "Teacher asks every student to remember every operator in the expression."
+      },
+      "correctAnswer": "c",
+      "explanations": {
+        "a": "Incorrect. Simply memorizing the operators does not provide the ordered insertion and removal behavior needed during conversion.",
+        "b": "Incorrect. Using one person to remember all operators does not model the stack's last-in, first-out access.",
+        "c": "Correct. A stack temporarily stores pending operators so that the most recently stored applicable operator can be removed first.",
+        "d": "Incorrect. Remembering every operator independently does not provide the controlled last-in, first-out behavior of a stack."
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "3. Situation: A teacher wants to process an arithmetic expression using a stack. What is an important limitation of this approach?",
+      "answers": {
+        "a": "It eliminates the need to consider operator precedence.",
+        "b": "Access to an arbitrary item in the stack is not the normal operation; stack access is restricted to the top.",
+        "c": "It requires all operands to be stored permanently in the stack.",
+        "d": "It makes every arithmetic expression invalid."
+      },
+      "correctAnswer": "b",
+      "explanations": {
+        "a": "Incorrect. Operator precedence still has to be considered when deciding when operators can be moved to the output.",
+        "b": "Correct. A stack is designed for access at its top, so arbitrary middle elements are not directly accessed as in an array.",
+        "c": "Incorrect. Operands can be processed according to the conversion procedure; they do not all have to remain permanently in the stack.",
+        "d": "Incorrect. Stack-based processing can convert valid arithmetic expressions; it does not make expressions invalid."
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "4. Which of the following best describes a stack?",
+      "answers": {
+        "a": "People standing in a queue at a service counter.",
+        "b": "A family tree.",
+        "c": "A football team.",
+        "d": "A set of dinner plates placed on top of one another."
+      },
+      "correctAnswer": "d",
+      "explanations": {
+        "a": "Incorrect. A service line normally follows first-in, first-out behavior rather than stack behavior.",
+        "b": "Incorrect. A family tree represents hierarchical relationships rather than last-in, first-out access.",
+        "c": "Incorrect. A football team is a collection of players and does not inherently define stack operations.",
+        "d": "Correct. Plates are typically added to and removed from the top, illustrating last-in, first-out behavior."
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "5. On what principle are objects inserted and removed in stacks?",
+      "answers": {
+        "a": "LIFO",
+        "b": "FIFO",
+        "c": "LILO",
+        "d": "None of these"
+      },
+      "correctAnswer": "a",
+      "explanations": {
+        "a": "Correct. A stack follows the Last In, First Out principle: the most recently inserted item is removed first.",
+        "b": "Incorrect. FIFO describes queue behavior, where the earliest inserted item is removed first.",
+        "c": "Incorrect. LILO is not the standard access principle used by a stack.",
+        "d": "Incorrect. A stack has a defined access principle, so this option does not describe it."
+      },
+      "difficulty": "beginner"
+    },
+    {
+      "question": "6. Which notation places the operator between its operands, as in $a+b$?",
+      "answers": {
+        "a": "Prefix notation",
+        "b": "Postfix notation",
+        "c": "Infix notation",
+        "d": "Reverse Polish notation"
+      },
+      "correctAnswer": "c",
+      "explanations": {
+        "a": "Incorrect. Prefix notation places the operator before its operands.",
+        "b": "Incorrect. Postfix notation places the operator after its operands.",
+        "c": "Correct. Infix notation places the operator between its operands, as in $a+b$.",
+        "d": "Incorrect. Reverse Polish notation is another name for postfix notation."
+      },
+      "difficulty": "beginner"
+    },
+    {
+      "question": "7. Why is operator precedence important when converting an infix expression to postfix?",
+      "answers": {
+        "a": "It determines the order in which operators should be placed in the postfix expression.",
+        "b": "It changes every operand into an operator.",
+        "c": "It removes all parentheses without considering operator relationships.",
+        "d": "It determines the variable names used in the expression."
+      },
+      "correctAnswer": "a",
+      "explanations": {
+        "a": "Correct. Operator precedence determines which operators must be processed before lower-precedence operators in the resulting postfix expression.",
+        "b": "Incorrect. Operator precedence does not change the roles of operands and operators.",
+        "c": "Incorrect. Parentheses are removed from the postfix form, but their grouping information must still be respected during conversion.",
+        "d": "Incorrect. Variable names are independent of operator precedence."
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "8. What is the main purpose of converting a valid infix expression to postfix notation?",
+      "answers": {
+        "a": "To make the expression contain more operators.",
+        "b": "To represent the expression so that evaluation can proceed without relying on infix parentheses and precedence during evaluation.",
+        "c": "To change every operator into a unary operator.",
+        "d": "To guarantee that the expression contains only numbers."
+      },
+      "correctAnswer": "b",
+      "explanations": {
+        "a": "Incorrect. Conversion does not add unnecessary operators to an expression.",
+        "b": "Correct. Postfix notation places operators after their operands, making the evaluation order explicit without requiring infix-style precedence rules during evaluation.",
+        "c": "Incorrect. Conversion does not change the arity of the operators.",
+        "d": "Incorrect. Postfix expressions can contain variables as operands as well as numeric operands."
+      },
+      "difficulty": "advanced"
+    },
+    {
+      "question": "9. For the infix expression $a+b*c$, which relationship between the operators must be respected during conversion?",
+      "answers": {
+        "a": "Addition must be performed before multiplication.",
+        "b": "Multiplication must be placed so that it is evaluated before addition.",
+        "c": "The operators must always be processed from right to left.",
+        "d": "Both operators have to be removed from the expression."
+      },
+      "correctAnswer": "b",
+      "explanations": {
+        "a": "Incorrect. The expression's operator hierarchy does not give addition priority over multiplication.",
+        "b": "Correct. Multiplication has higher precedence than addition, so the postfix form must preserve multiplication before the addition.",
+        "c": "Incorrect. Operator precedence does not mean that all operators are processed from right to left.",
+        "d": "Incorrect. Conversion rearranges operator placement but does not remove the operators."
+      },
+      "difficulty": "advanced"
+    }
+  ]
 }

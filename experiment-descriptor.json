@@ -2,6 +2,7 @@
   "unit-type": "lu",
   "label": "Infix and Postfix",
   "basedir": ".",
+  "LaTeXinMD": "true",
   "code-assessment": {
     "include": true,
     "languages": ["javascript"],
@@ -18,7 +19,7 @@
       "source": "overview.md",
       "target": "overview.html"
     },
-    
+
     {
       "unit-type": "task",
       "label": "Pretest",
@@ -41,7 +42,7 @@
           "source": "overview.md",
           "target": "overview.html"
         },
-	{
+        {
           "unit-type": "task",
           "label": "Infix Expressions",
           "content-type": "video",
@@ -55,27 +56,25 @@
           "source": "introducing-postfix-expressions.md",
           "target": "introducing-postfix-expressions.html"
         },
-      	{
-         "unit-type": "task",
-         "label": "Quiz",
-         "content-type": "assesment",
-         "source": "infix-quiz.json",
-         "target": "infix-quiz.html"
-       }, 
-	
-	
-	{
+        {
+          "unit-type": "task",
+          "label": "Quiz",
+          "content-type": "assesment",
+          "source": "infix-quiz.json",
+          "target": "infix-quiz.html"
+        },
+
+        {
           "unit-type": "task",
           "label": "Algorithm for Conversion without Stack",
           "content-type": "video",
           "source": "algorithm-for-conversion-without-stack.md",
           "target": "algorithm-for-conversion-without-stack.html"
         }
-      
       ]
     },
-    
-        {
+
+    {
       "unit-type": "lu",
       "label": "Infix to Postfix Conversion with Stack",
       "basedir": "infix to-postfix-conversion-with-stack",
@@ -83,7 +82,7 @@
         {
           "unit-type": "aim"
         },
-	
+
         {
           "unit-type": "task",
           "label": "Validation of Expressions Demo",
@@ -98,7 +97,7 @@
           "source": "push-and-pop-operations-on-stack.md",
           "target": "push-and-pop-operations-on-stack.html"
         },
-	{
+        {
           "unit-type": "task",
           "label": "The Whole Conversion",
           "content-type": "video",
@@ -119,7 +118,7 @@
           "source": "conversion-without-stack-quiz.json",
           "target": "conversion-without-stack-quiz.html"
         },
-      	{
+        {
           "unit-type": "task",
           "label": "The Whole Conversion Exercise",
           "content-type": "simulation",
@@ -129,7 +128,7 @@
       ]
     },
 
-     {
+    {
       "unit-type": "lu",
       "label": "Evaluation of Postfix Expressions",
       "basedir": "evaluation-of-postfix-expressions",
@@ -137,7 +136,7 @@
         {
           "unit-type": "aim"
         },
-	
+
         {
           "unit-type": "task",
           "label": "Evaluation of Postfix Expression",
@@ -147,15 +146,21 @@
         },
         {
           "unit-type": "task",
+          "label": "Quiz",
+          "content-type": "assesment",
+          "source": "evaluation-of-postfix-expressions.json",
+          "target": "evaluation-of-postfix-expressions.html"
+        },
+        {
+          "unit-type": "task",
           "label": "Postfix Evaluation Exercise",
           "content-type": "simulation",
           "source": "simulation/postfix_eval.html",
           "target": "postfix_eval.html"
         }
-	
       ]
     },
-    
+
     {
       "unit-type": "task",
       "label": "Posttest",
@@ -163,7 +168,7 @@
       "source": "posttest.json",
       "target": "posttest.html"
     },
-       
+
     {
       "unit-type": "task",
       "label": "Further Readings/References",
